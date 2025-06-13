@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
+// ↓↓↓ ADIÇÃO DOS IMPORTS NECESSÁRIOS PARA O WORKBOX ↓↓↓
+import { ExpirationPlugin } from 'workbox-expiration'
+import { CacheableResponsePlugin } from 'workbox-cacheable-response'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -41,44 +44,57 @@ export default defineConfig({
           }
         ]
       },
+      // ↓↓↓ CORREÇÃO APLICADA NA ESTRUTURA DO WORKBOX ↓↓↓
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp}'],
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            urlPattern: ({ url }) => url.origin === 'https://fonts.googleapis.com',
             handler: 'CacheFirst',
             options: {
-              cacheName: 'google-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
-              },
-              cacheKeyWillBeUsed: async ({ request }) => {
-                return `${request.url}?v=1`;
-              }
-            }
+              cacheName: 'google-fonts-stylesheets',
+              plugins: [
+                new CacheableResponsePlugin({
+                  statuses: [0, 200],
+                }),
+                new ExpirationPlugin({
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 Ano
+                }),
+              ],
+            },
           },
           {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+            urlPattern: ({ url }) => url.origin === 'https://fonts.gstatic.com',
             handler: 'CacheFirst',
             options: {
-              cacheName: 'gstatic-fonts-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
-              }
-            }
+              cacheName: 'google-fonts-webfonts',
+              plugins: [
+                new CacheableResponsePlugin({
+                  statuses: [0, 200],
+                }),
+                new ExpirationPlugin({
+                  maxEntries: 30,
+                  maxAgeSeconds: 60 * 60 * 24 * 365 // 1 Ano
+                }),
+              ],
+            },
           },
           {
-            urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\/.*/i,
+            urlPattern: ({ url }) => url.origin === 'https://cdnjs.cloudflare.com',
             handler: 'CacheFirst',
             options: {
               cacheName: 'cdnjs-cache',
-              expiration: {
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // <== 30 days
-              }
-            }
+              plugins: [
+                new CacheableResponsePlugin({
+                  statuses: [0, 200],
+                }),
+                new ExpirationPlugin({
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 30 // 30 Dias
+                }),
+              ],
+            },
           }
         ]
       }
@@ -107,7 +123,7 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           animations: ['framer-motion'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-avatar', '@radix-ui/react-button']
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-avatar'] // Removi um item duplicado aqui para limpeza
         }
       }
     },
@@ -117,4 +133,3 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion']
   }
 })
-
