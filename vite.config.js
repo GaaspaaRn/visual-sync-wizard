@@ -5,18 +5,23 @@ import path from 'path'
 import { componentTagger } from "lovable-tagger"
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
-  plugins: [
-    react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+export default defineConfig(({ mode }) => {
+  const plugins = [react()]
+  
+  if (mode === 'development') {
+    plugins.push(componentTagger())
+  }
+
+  return {
+    plugins,
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
     },
-  },
-  server: {
-    host: "::",
-    port: 8080,
-  },
-}))
+    server: {
+      host: "::",
+      port: 8080,
+    },
+  }
+})
