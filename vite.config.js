@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     tailwindcss(),
     mode === 'development' && componentTagger(),
-    // Vamos manter a configuração simplificada do PWA que já sabemos que funciona
+    // Simplified PWA configuration
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
@@ -70,7 +70,6 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           animations: ['framer-motion'],
-          // ↓↓↓ A CORREÇÃO ESTÁ AQUI: REMOÇÃO DO PACOTE INEXISTENTE ↓↓↓
           ui: ['@radix-ui/react-dialog', '@radix-ui/react-avatar']
         }
       }
@@ -78,6 +77,7 @@ export default defineConfig(({ mode }) => ({
     chunkSizeWarningLimit: 1000
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion']
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['lenis', 'gsap']
   }
 }))
