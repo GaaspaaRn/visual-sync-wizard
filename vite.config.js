@@ -4,15 +4,13 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
-import { componentTagger } from "lovable-tagger";
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     tailwindcss(),
-    mode === 'development' && componentTagger(),
-    // Simplified PWA configuration
+    // O plugin componentTagger foi removido para simplificar o build.
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
@@ -56,26 +54,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  build: {
-    target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          animations: ['framer-motion'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-avatar']
-        }
-      }
-    },
-    chunkSizeWarningLimit: 1000
-  },
+  // A seção 'build' foi removida para usar as configurações padrão do Vite.
+  // Isso deve ajudar a resolver o erro de permissão do esbuild.
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
     exclude: ['lenis', 'gsap']
