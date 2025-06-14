@@ -23,14 +23,5 @@ export default defineConfig(({ mode }) => {
       host: "::",
       port: 8080,
     },
-    build: {
-      minify: 'terser',
-      rollupOptions: {
-        output: {
-          manualChunks: undefined,
-        },
-      },
-    },
-    esbuild: false,
   }
 })
