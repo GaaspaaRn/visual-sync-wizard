@@ -23,18 +23,5 @@ export default defineConfig(({ mode }) => {
       host: "::",
       port: 8080,
     },
-    build: {
-      target: 'esnext',
-      minify: false,
-      rollupOptions: {
-        external: [],
-      },
-    },
-    optimizeDeps: {
-      force: true,
-    },
-    esbuild: {
-      target: 'esnext',
-    },
   }
 })
