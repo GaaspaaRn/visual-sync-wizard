@@ -1,17 +1,19 @@
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import tailwindcss from '@tailwindcss/vite' // Removido temporariamente para diagnóstico
+import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
+import { componentTagger } from 'lovable-tagger'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   // Plugins essenciais
   plugins: [
     react(),
-    // tailwindcss(), // Removido temporariamente para diagnóstico
-  ],
-  
+    tailwindcss(),
+    mode === 'development' && componentTagger(),
+  ].filter(Boolean),
+
   // Configuração de alias (caminho relativo)
   resolve: {
     alias: {
@@ -21,7 +23,7 @@ export default defineConfig({
 
   // Configuração do servidor de desenvolvimento
   server: {
-    host: "0.0.0.0",
+    host: "::",
     port: 8080,
   },
-})
+}))
