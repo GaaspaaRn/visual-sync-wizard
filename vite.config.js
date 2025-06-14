@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    // ↓↓↓ CONFIGURAÇÃO DO PWA SIMPLIFICADA PARA GARANTIR O BUILD ↓↓↓
+    // Vamos manter a configuração simplificada do PWA que já sabemos que funciona
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
@@ -42,7 +42,6 @@ export default defineConfig({
           }
         ]
       }
-      // A seção 'workbox' foi removida intencionalmente para corrigir o erro de build.
     })
   ],
   resolve: {
@@ -68,7 +67,8 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           animations: ['framer-motion'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-avatar', '@radix-ui/react-button']
+          // ↓↓↓ A CORREÇÃO ESTÁ AQUI: REMOÇÃO DO PACOTE INEXISTENTE ↓↓↓
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-avatar']
         }
       }
     },
