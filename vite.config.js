@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -6,14 +5,14 @@ import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
+  // Plugins essenciais
   plugins: [
     react(),
     tailwindcss(),
-    // O plugin componentTagger foi removido para simplificar o build.
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      // Mantendo apenas o manifesto para garantir que o build passe
       manifest: {
         name: 'Gruv Label - Agenciamento de Artistas Megafunk',
         short_name: 'Gruv Label',
@@ -44,20 +43,22 @@ export default defineConfig(({ mode }) => ({
         ]
       }
     })
-  ].filter(Boolean),
+  ],
+  
+  // Configuração de alias (caminho relativo)
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
+  // Configuração do servidor de desenvolvimento
   server: {
-    host: "::",
+    host: "0.0.0.0", // Alterado para um padrão mais comum que "::"
     port: 8080,
   },
-  // A seção 'build' foi removida para usar as configurações padrão do Vite.
-  // Isso deve ajudar a resolver o erro de permissão do esbuild.
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
-    exclude: ['lenis', 'gsap']
-  }
-}))
+
+  // A seção 'build' e 'optimizeDeps' foram removidas intencionalmente.
+  // Vamos deixar o Vite usar suas configurações padrão, que são otimizadas
+  // e menos propensas a causar erros de permissão.
+})
