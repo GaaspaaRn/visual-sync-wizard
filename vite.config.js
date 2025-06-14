@@ -1,14 +1,17 @@
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
+import { componentTagger } from "lovable-tagger";
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     tailwindcss(),
+    mode === 'development' && componentTagger(),
     // Vamos manter a configuração simplificada do PWA que já sabemos que funciona
     VitePWA({
       registerType: 'autoUpdate',
@@ -43,15 +46,15 @@ export default defineConfig({
         ]
       }
     })
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   server: {
+    host: "::",
     port: 8080,
-    host: '0.0.0.0'
   },
   build: {
     target: 'esnext',
@@ -77,4 +80,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion']
   }
-})
+}))
