@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
 import { Youtube, Instagram, Music } from 'lucide-react';
@@ -865,7 +864,7 @@ function App() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <h3>Top Track: {selectedDJ.topTrack}</h3>
+                  <h3>Música Mais Ouvida</h3>
                   <div 
                     className="spotify-player" 
                     dangerouslySetInnerHTML={{ __html: selectedDJ.spotifyEmbed }}
@@ -873,7 +872,7 @@ function App() {
                 </motion.div>
                 
                 <motion.div 
-                  className="modal-section"
+                  className="modal-section modal-social-section"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
@@ -900,38 +899,29 @@ function App() {
                       <Instagram size={20} />
                       <span>Instagram</span>
                     </motion.a>
-                    <motion.a 
-                      href={selectedDJ.spotifyUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="modal-social-link spotify"
-                      whileHover={{ x: 5 }}
-                    >
-                      <Music size={20} />
-                      <span>Spotify</span>
-                    </motion.a>
                   </div>
                 </motion.div>
-                
-                <motion.div 
-                  className="modal-cta"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                >
-                  <motion.button 
-                    className="btn btn-primary btn-large"
-                    style={{ background: selectedDJ.color }}
-                    onClick={() => {
-                      openWhatsApp(`Olá, gostaria de saber mais sobre o ${selectedDJ.artistName}.`);
-                    }}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    CONTRATAR {selectedDJ.artistName.toUpperCase()}
-                  </motion.button>
-                </motion.div>
               </div>
+              
+              {/* Fixed Contract Button */}
+              <motion.div 
+                className="modal-cta-fixed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                <motion.button 
+                  className="btn btn-primary btn-large"
+                  style={{ background: selectedDJ.color }}
+                  onClick={() => {
+                    openWhatsApp(`Olá, gostaria de saber mais sobre o ${selectedDJ.artistName}.`);
+                  }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  CONTRATAR {selectedDJ.artistName.toUpperCase()}
+                </motion.button>
+              </motion.div>
             </motion.div>
           </motion.div>
         )}
