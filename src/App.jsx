@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
+import { Youtube, Instagram, Music } from 'lucide-react';
 import './App.css';
 
 // Import artist images with lazy loading
@@ -435,8 +436,10 @@ function App() {
             loop 
             playsInline
             className="hero-video-element"
+            poster=""
           >
-            <source src="/videos/gruvlabel-djzatelli.mp4" type="video/mp4" />
+            <source src="./videos/gruvlabel-djzatelli.mp4" type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
           </video>
           <div className="hero-video-overlay"></div>
         </div>
@@ -589,7 +592,7 @@ function App() {
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <i className="fab fa-youtube"></i>
+                        <Youtube size={18} />
                       </motion.a>
                       <motion.a 
                         href={dj.instagram} 
@@ -600,7 +603,7 @@ function App() {
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <i className="fab fa-instagram"></i>
+                        <Instagram size={18} />
                       </motion.a>
                       <motion.a 
                         href={dj.spotifyUrl} 
@@ -611,7 +614,7 @@ function App() {
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <i className="fab fa-spotify"></i>
+                        <Music size={18} />
                       </motion.a>
                     </div>
                     
@@ -705,7 +708,7 @@ function App() {
                     className="contact-method"
                     whileHover={{ x: 10 }}
                   >
-                    <i className="fab fa-instagram"></i>
+                    <Instagram size={20} />
                     <a href="https://www.instagram.com/gruvlabel" target="_blank" rel="noopener noreferrer">
                       @gruvlabel
                     </a>
@@ -786,7 +789,7 @@ function App() {
                   whileHover={{ scale: 1.2, y: -2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <i className="fab fa-instagram"></i>
+                  <Instagram size={20} />
                 </motion.a>
               </div>
             </div>
@@ -884,7 +887,7 @@ function App() {
                       className="modal-social-link youtube"
                       whileHover={{ x: 5 }}
                     >
-                      <i className="fab fa-youtube"></i>
+                      <Youtube size={20} />
                       <span>YouTube</span>
                     </motion.a>
                     <motion.a 
@@ -894,7 +897,7 @@ function App() {
                       className="modal-social-link instagram"
                       whileHover={{ x: 5 }}
                     >
-                      <i className="fab fa-instagram"></i>
+                      <Instagram size={20} />
                       <span>Instagram</span>
                     </motion.a>
                     <motion.a 
@@ -904,7 +907,7 @@ function App() {
                       className="modal-social-link spotify"
                       whileHover={{ x: 5 }}
                     >
-                      <i className="fab fa-spotify"></i>
+                      <Music size={20} />
                       <span>Spotify</span>
                     </motion.a>
                   </div>
