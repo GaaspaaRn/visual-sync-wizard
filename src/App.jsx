@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
 import './App.css';
@@ -99,18 +100,6 @@ const LazyImage = ({ src, alt, className, ...props }) => {
   );
 };
 
-// Parallax text component
-const ParallaxText = ({ children, speed = 0.5, className }) => {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, speed * 1000]);
-  
-  return (
-    <motion.div style={{ y }} className={className}>
-      {children}
-    </motion.div>
-  );
-};
-
 // Reveal animation component
 const RevealOnScroll = ({ children, delay = 0 }) => {
   const ref = useRef(null);
@@ -119,9 +108,9 @@ const RevealOnScroll = ({ children, delay = 0 }) => {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 75 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 75 }}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, delay, ease: "easeOut" }}
     >
       {children}
     </motion.div>
@@ -321,11 +310,11 @@ function App() {
             onClick={toggleMobileMenu}
             whileTap={{ scale: 0.95 }}
           >
-            <motion.i 
-              className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}
-              animate={{ rotate: mobileMenuOpen ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
-            />
+            <span className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
           </motion.button>
           
           {/* Desktop Navigation */}
@@ -438,6 +427,20 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="hero">
+        {/* Video Background */}
+        <div className="hero-video">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="hero-video-element"
+          >
+            <source src="/videos/gruvlabel-djzatelli.mp4" type="video/mp4" />
+          </video>
+          <div className="hero-video-overlay"></div>
+        </div>
+
         <motion.div 
           className="hero-bg"
           style={{ y: heroY }}
@@ -453,9 +456,14 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              <ParallaxText speed={0.2} className="hero-title-main">
+              <motion.span 
+                className="hero-title-main"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              >
                 GRUV LABEL
-              </ParallaxText>
+              </motion.span>
               <motion.span 
                 className="hero-title-sub"
                 initial={{ opacity: 0 }}
@@ -814,21 +822,6 @@ function App() {
                 <i className="fas fa-times"></i>
               </motion.button>
               
-              {/* Sticky Contratar Button for Mobile */}
-              <div className="modal-sticky-cta">
-                <motion.button 
-                  className="btn btn-primary btn-sticky"
-                  style={{ background: selectedDJ.color }}
-                  onClick={() => {
-                    openWhatsApp(`Olá, gostaria de saber mais sobre o ${selectedDJ.artistName}.`);
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  CONTRATAR {selectedDJ.artistName.toUpperCase()}
-                </motion.button>
-              </div>
-              
               <div className="modal-content">
                 <motion.div 
                   className="modal-header"
@@ -836,7 +829,7 @@ function App() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <div className="modal-avatar" style={{ background: selectedDJ.color }}>
+                  <div className="modal-avatar">
                     <LazyImage 
                       src={selectedDJ.image} 
                       alt={selectedDJ.name} 
@@ -918,7 +911,7 @@ function App() {
                 </motion.div>
                 
                 <motion.div 
-                  className="desktop-only"
+                  className="modal-cta"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
@@ -945,4 +938,3 @@ function App() {
 }
 
 export default App;
-
