@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, useScroll, useTransform, useSpring, useInView, AnimatePresence } from 'framer-motion';
 import { Youtube, Instagram, Music } from 'lucide-react';
@@ -841,18 +842,20 @@ function App() {
                   <div className="modal-info">
                     <h2>{selectedDJ.name}</h2>
                     <p>{selectedDJ.bio}</p>
-                    <div className="modal-stats">
-                      <div className="modal-stat">
+                    
+                    {/* Stats horizontais */}
+                    <div className="modal-stats-horizontal">
+                      <div className="modal-stat-item">
                         <span className="modal-stat-number">{selectedDJ.stats.youtubeSubscribers}</span>
-                        <span className="modal-stat-label">Inscritos</span>
+                        <span className="modal-stat-label">YOUTUBE<br/>INSCRITOS</span>
                       </div>
-                      <div className="modal-stat">
+                      <div className="modal-stat-item">
                         <span className="modal-stat-number">{selectedDJ.stats.youtubeViews}</span>
-                        <span className="modal-stat-label">Views</span>
+                        <span className="modal-stat-label">VISUALIZAÇÕES</span>
                       </div>
-                      <div className="modal-stat">
+                      <div className="modal-stat-item">
                         <span className="modal-stat-number">{selectedDJ.stats.spotifyMonthly}</span>
-                        <span className="modal-stat-label">Ouvintes/mês</span>
+                        <span className="modal-stat-label">OUVINTES/MÊS</span>
                       </div>
                     </div>
                   </div>
@@ -878,13 +881,15 @@ function App() {
                   transition={{ delay: 0.4 }}
                 >
                   <h3>Redes Sociais</h3>
-                  <div className="modal-social">
+                  <div className="modal-social-grid">
                     <motion.a 
                       href={selectedDJ.youtube} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="modal-social-link youtube"
-                      whileHover={{ x: 5 }}
+                      className="modal-social-button youtube"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Youtube size={20} />
                       <span>YouTube</span>
@@ -893,25 +898,39 @@ function App() {
                       href={selectedDJ.instagram} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="modal-social-link instagram"
-                      whileHover={{ x: 5 }}
+                      className="modal-social-button instagram"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Instagram size={20} />
                       <span>Instagram</span>
+                    </motion.a>
+                    <motion.a 
+                      href={selectedDJ.spotifyUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="modal-social-button spotify"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Music size={20} />
+                      <span>Spotify</span>
                     </motion.a>
                   </div>
                 </motion.div>
               </div>
               
-              {/* Fixed Contract Button */}
+              {/* Fixed Contract Button - mais transparente */}
               <motion.div 
-                className="modal-cta-fixed"
+                className="modal-cta-transparent"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
               >
                 <motion.button 
-                  className="btn btn-primary btn-large"
+                  className="btn-contract-transparent"
                   style={{ background: selectedDJ.color }}
                   onClick={() => {
                     openWhatsApp(`Olá, gostaria de saber mais sobre o ${selectedDJ.artistName}.`);
