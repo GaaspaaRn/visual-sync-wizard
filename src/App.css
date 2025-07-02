@@ -87,7 +87,7 @@
 .time-number {
   font-size: 4rem;
   font-weight: 700;
-  color: #ff0000;
+  color: white;
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
   text-shadow: 
@@ -106,7 +106,7 @@
 
 .time-separator {
   font-size: 4rem;
-  color: #ff0000;
+  color: white;
   margin-top: -0.5rem;
   align-self: flex-start;
   text-shadow: 
