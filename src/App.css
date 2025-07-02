@@ -1,5 +1,6 @@
 .countdown-container {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,9 +9,10 @@
   color: white;
   text-align: center;
   position: relative;
-  padding: 4rem 2rem;
+  padding: 8vh 2rem;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .countdown-container::before {
@@ -88,8 +90,8 @@
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
   text-shadow: 
-    0 0 5px #ff0000,
-    0 0 10px #ff0000;
+    0 0 3px #ff0000,
+    0 0 6px #ff0000;
   animation: red-glow-pulse 2s ease-in-out infinite alternate;
 }
 
@@ -107,8 +109,8 @@
   margin-top: -0.5rem;
   align-self: flex-start;
   text-shadow: 
-    0 0 5px #ff0000,
-    0 0 10px #ff0000;
+    0 0 3px #ff0000,
+    0 0 6px #ff0000;
   animation: separator-blink 1.5s ease-in-out infinite;
 }
 
@@ -159,16 +161,16 @@
 @keyframes red-glow-pulse {
   0% {
     text-shadow: 
-      0 0 5px #ff0000,
-      0 0 10px #ff0000;
+      0 0 3px #ff0000,
+      0 0 6px #ff0000;
     transform: scale(1);
   }
   100% {
     text-shadow: 
-      0 0 8px #ff0000,
-      0 0 15px #ff0000,
-      0 0 20px #ff0000;
-    transform: scale(1.02);
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 12px #ff0000;
+    transform: scale(1.01);
   }
 }
 
@@ -185,13 +187,13 @@
   0%, 60% { 
     opacity: 1; 
     text-shadow: 
-      0 0 5px #ff0000,
-      0 0 10px #ff0000;
+      0 0 3px #ff0000,
+      0 0 6px #ff0000;
   }
   70%, 100% { 
-    opacity: 0.4; 
+    opacity: 0.5; 
     text-shadow: 
-      0 0 3px #ff0000;
+      0 0 2px #ff0000;
   }
 }
 
@@ -223,7 +225,7 @@
 
 @media (max-width: 768px) {
   .countdown-container {
-    padding: 3rem 2rem;
+    padding: 6vh 2rem;
   }
   
   .mystery-title,
