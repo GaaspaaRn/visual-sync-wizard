@@ -1,5 +1,6 @@
 .countdown-container {
   height: 100vh;
+  height: 100dvh; /* Para mobile com melhor suporte */
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -225,13 +226,16 @@
 
 @media (max-width: 768px) {
   .countdown-container {
-    padding: 6vh 2rem;
+    padding: 4vh 1rem;
+    height: 100vh;
+    height: 100dvh; /* Para mobile com melhor suporte */
   }
   
   .mystery-title,
   .mystery-subtitle {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
   }
   
   .countdown-display {
@@ -239,15 +243,15 @@
   }
   
   .time-number {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .time-separator {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .gruv-logo-bottom {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
   }
 }

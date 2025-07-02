@@ -33,7 +33,10 @@ body {
   place-items: center;
   min-width: 320px;
   height: 100vh;
+  height: 100dvh; /* Melhor suporte para mobile */
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 h1 {
