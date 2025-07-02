@@ -4,174 +4,108 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);
+  background: #000000;
   color: white;
   text-align: center;
   position: relative;
-  overflow: hidden;
-}
-
-.countdown-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
-  animation: pulse-glow 4s ease-in-out infinite alternate;
+  padding: 2rem;
 }
 
 .mystery-header {
   margin-bottom: 4rem;
-  z-index: 2;
-}
-
-.gruv-logo {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 2rem;
-  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
-  animation: float 3s ease-in-out infinite;
+  max-width: 600px;
 }
 
 .mystery-title {
-  font-size: 3.5rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 300;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-shift 3s ease infinite;
-  text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1.2;
 }
 
 .mystery-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .countdown-display {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
-  margin-bottom: 4rem;
-  z-index: 2;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .time-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 15px;
-  padding: 1.5rem;
-  min-width: 100px;
-  backdrop-filter: blur(10px);
-  animation: glow-border 2s ease-in-out infinite alternate;
 }
 
 .time-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #ffd700;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-  animation: number-pulse 1s ease-in-out infinite;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ff0000;
+  margin-bottom: 0.5rem;
+  font-family: 'Arial', sans-serif;
 }
 
 .time-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #ccc;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
   letter-spacing: 1px;
 }
 
 .time-separator {
-  font-size: 2rem;
-  color: #ffd700;
-  animation: blink 1s infinite;
+  font-size: 4rem;
+  color: #ff0000;
+  margin-top: -0.5rem;
+  align-self: flex-start;
 }
 
-.mystery-footer {
-  z-index: 2;
-  position: relative;
-}
-
-.launch-date {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffd700;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-}
-
-.glow-effect {
+.logo-container {
   position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 100px;
-  background: radial-gradient(ellipse, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
-  animation: glow-pulse 2s ease-in-out infinite;
+  bottom: 3rem;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes pulse-glow {
-  0% { opacity: 0.3; }
-  100% { opacity: 0.7; }
-}
-
-@keyframes glow-border {
-  0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-  100% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); }
-}
-
-@keyframes number-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0.3; }
-}
-
-@keyframes glow-pulse {
-  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.3; }
-  50% { transform: translateX(-50%) scale(1.1); opacity: 0.6; }
+.gruv-logo-bottom {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #4169E1;
+  border-radius: 50%;
+  padding: 10px;
+  background: rgba(65, 105, 225, 0.1);
 }
 
 @media (max-width: 768px) {
-  .mystery-title {
-    font-size: 2.5rem;
+  .mystery-title,
+  .mystery-subtitle {
+    font-size: 1.8rem;
   }
   
   .countdown-display {
     gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .time-unit {
-    min-width: 80px;
-    padding: 1rem;
+    margin-bottom: 4rem;
   }
   
   .time-number {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .time-separator {
+    font-size: 2.5rem;
+  }
+  
+  .gruv-logo-bottom {
+    width: 60px;
+    height: 60px;
   }
 }

@@ -36,14 +36,13 @@ function App() {
   return (
     <div className="countdown-container">
       <div className="mystery-header">
-        <img src={gruvIcon} className="gruv-logo" alt="GRUV" />
-        <h1 className="mystery-title">ALGO GRANDE VEM AÍ</h1>
-        <p className="mystery-subtitle">O futuro da música está chegando...</p>
+        <h1 className="mystery-title">O CHAMADO FOI FEITO.</h1>
+        <p className="mystery-subtitle">UM NOVO MOVIMENTO ESTÁ PRESTES A COMEÇAR.</p>
       </div>
       
       <div className="countdown-display">
         <div className="time-unit">
-          <span className="time-number">{timeLeft.days.toString().padStart(2, '0')}</span>
+          <span className="time-number">{timeLeft.days.toString().padStart(3, '0')}</span>
           <span className="time-label">DIAS</span>
         </div>
         <div className="time-separator">:</div>
@@ -56,16 +55,14 @@ function App() {
           <span className="time-number">{timeLeft.minutes.toString().padStart(2, '0')}</span>
           <span className="time-label">MINUTOS</span>
         </div>
-        <div className="time-separator">:</div>
         <div className="time-unit">
           <span className="time-number">{timeLeft.seconds.toString().padStart(2, '0')}</span>
           <span className="time-label">SEGUNDOS</span>
         </div>
       </div>
 
-      <div className="mystery-footer">
-        <p className="launch-date">10 DE JULHO • 2025 • 12:00 BRT</p>
-        <div className="glow-effect"></div>
+      <div className="logo-container">
+        <img src={gruvIcon} className="gruv-logo-bottom" alt="GRUV" />
       </div>
     </div>
   )
