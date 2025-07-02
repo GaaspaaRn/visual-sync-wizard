@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: #000000;
   color: white;
   text-align: center;
   position: relative;
-  padding: 2rem;
+  padding: 6rem 2rem;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
@@ -26,7 +26,6 @@
 }
 
 .mystery-header {
-  margin-bottom: 4rem;
   max-width: 600px;
   z-index: 2;
   animation: fade-in-up 1.5s ease-out;
@@ -56,7 +55,6 @@
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  margin-bottom: 6rem;
   flex-wrap: wrap;
   justify-content: center;
   z-index: 2;
@@ -82,10 +80,8 @@
   margin-bottom: 0.5rem;
   font-family: 'Poppins', sans-serif;
   text-shadow: 
-    0 0 10px #ff0000,
-    0 0 20px #ff0000,
-    0 0 30px #ff0000,
-    0 0 40px #ff0000;
+    0 0 5px #ff0000,
+    0 0 10px #ff0000;
   animation: red-glow-pulse 2s ease-in-out infinite alternate;
 }
 
@@ -103,21 +99,22 @@
   margin-top: -0.5rem;
   align-self: flex-start;
   text-shadow: 
-    0 0 10px #ff0000,
-    0 0 20px #ff0000;
+    0 0 5px #ff0000,
+    0 0 10px #ff0000;
   animation: separator-blink 1.5s ease-in-out infinite;
 }
 
 .logo-container {
-  position: absolute;
-  bottom: 3rem;
   z-index: 2;
   animation: logo-float 4s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gruv-logo-bottom {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
   animation: logo-pulse 3s ease-in-out infinite alternate;
 }
@@ -153,19 +150,16 @@
 @keyframes red-glow-pulse {
   0% {
     text-shadow: 
-      0 0 10px #ff0000,
-      0 0 20px #ff0000,
-      0 0 30px #ff0000;
+      0 0 5px #ff0000,
+      0 0 10px #ff0000;
     transform: scale(1);
   }
   100% {
     text-shadow: 
+      0 0 8px #ff0000,
       0 0 15px #ff0000,
-      0 0 25px #ff0000,
-      0 0 35px #ff0000,
-      0 0 45px #ff0000,
-      0 0 55px #ff0000;
-    transform: scale(1.05);
+      0 0 20px #ff0000;
+    transform: scale(1.02);
   }
 }
 
@@ -182,13 +176,13 @@
   0%, 60% { 
     opacity: 1; 
     text-shadow: 
-      0 0 10px #ff0000,
-      0 0 20px #ff0000;
+      0 0 5px #ff0000,
+      0 0 10px #ff0000;
   }
   70%, 100% { 
-    opacity: 0.3; 
+    opacity: 0.4; 
     text-shadow: 
-      0 0 5px #ff0000;
+      0 0 3px #ff0000;
   }
 }
 
@@ -227,7 +221,6 @@
   
   .countdown-display {
     gap: 1rem;
-    margin-bottom: 4rem;
   }
   
   .time-number {
@@ -239,7 +232,7 @@
   }
   
   .gruv-logo-bottom {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 }
