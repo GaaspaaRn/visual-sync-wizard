@@ -40,24 +40,26 @@ function App() {
         <p className="mystery-subtitle">UM NOVO MOVIMENTO ESTÁ PRESTES A COMEÇAR.</p>
       </div>
       
-      <div className="countdown-display">
-        <div className="time-unit">
-          <span className="time-number">{timeLeft.days.toString().padStart(3, '0')}</span>
-          <span className="time-label">DIAS</span>
-        </div>
-        <div className="time-separator">:</div>
-        <div className="time-unit">
-          <span className="time-number">{timeLeft.hours.toString().padStart(2, '0')}</span>
-          <span className="time-label">HORAS</span>
-        </div>
-        <div className="time-separator">:</div>
-        <div className="time-unit">
-          <span className="time-number">{timeLeft.minutes.toString().padStart(2, '0')}</span>
-          <span className="time-label">MINUTOS</span>
-        </div>
-        <div className="time-unit">
-          <span className="time-number">{timeLeft.seconds.toString().padStart(2, '0')}</span>
-          <span className="time-label">SEGUNDOS</span>
+      <div className="countdown-section">
+        <div className="countdown-display">
+          <div className="time-unit">
+            <span className="time-number">{timeLeft.days.toString().padStart(3, '0')}</span>
+            <span className="time-label">DIAS</span>
+          </div>
+          <div className="time-separator">:</div>
+          <div className="time-unit">
+            <span className="time-number">{timeLeft.hours.toString().padStart(2, '0')}</span>
+            <span className="time-label">HORAS</span>
+          </div>
+          <div className="time-separator">:</div>
+          <div className="time-unit">
+            <span className="time-number">{timeLeft.minutes.toString().padStart(2, '0')}</span>
+            <span className="time-label">MINUTOS</span>
+          </div>
+          <div className="time-unit">
+            <span className="time-number">{timeLeft.seconds.toString().padStart(2, '0')}</span>
+            <span className="time-label">SEGUNDOS</span>
+          </div>
         </div>
       </div>
 

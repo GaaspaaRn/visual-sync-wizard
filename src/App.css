@@ -1,5 +1,5 @@
 .countdown-container {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   color: white;
   text-align: center;
   position: relative;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
@@ -29,6 +29,7 @@
   max-width: 600px;
   z-index: 2;
   animation: fade-in-up 1.5s ease-out;
+  flex-shrink: 0;
 }
 
 .mystery-title {
@@ -51,13 +52,20 @@
   animation: text-glow 3s ease-in-out infinite alternate 0.5s;
 }
 
+.countdown-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  z-index: 2;
+}
+
 .countdown-display {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  z-index: 2;
   animation: fade-in-up 2s ease-out 0.5s both;
 }
 
@@ -110,6 +118,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .gruv-logo-bottom {
@@ -213,6 +222,10 @@
 }
 
 @media (max-width: 768px) {
+  .countdown-container {
+    padding: 3rem 2rem;
+  }
+  
   .mystery-title,
   .mystery-subtitle {
     font-size: 1.8rem;
