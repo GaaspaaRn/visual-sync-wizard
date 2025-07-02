@@ -42,7 +42,6 @@
   color: white;
   letter-spacing: 3px;
   line-height: 1.2;
-  animation: text-glow 3s ease-in-out infinite alternate;
 }
 
 .mystery-subtitle {
@@ -52,7 +51,6 @@
   letter-spacing: 3px;
   line-height: 1.2;
   margin: 0;
-  animation: text-glow 3s ease-in-out infinite alternate 0.5s;
 }
 
 .countdown-section {
@@ -127,7 +125,6 @@
 .gruv-logo-bottom {
   width: 120px;
   height: 120px;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
   animation: logo-pulse 3s ease-in-out infinite alternate;
 }
 
@@ -217,10 +214,10 @@
 
 @keyframes logo-pulse {
   0% {
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    transform: scale(1);
   }
   100% {
-    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
+    transform: scale(1.02);
   }
 }
 
