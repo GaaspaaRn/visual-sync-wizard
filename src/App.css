@@ -100,7 +100,7 @@
 
 .time-number {
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 700;
   color: white;
   margin-bottom: 0.5rem;
   font-family: 'Dystopian', monospace;
@@ -112,12 +112,12 @@
 
 .time-unit:nth-child(5) .time-number,
 .time-unit:nth-child(6) .time-number {
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .time-label {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 300;
   color: white;
   letter-spacing: 2px;
   animation: label-fade 2s ease-in-out infinite alternate;
@@ -126,7 +126,7 @@
 
 .time-unit:nth-child(5) .time-label,
 .time-unit:nth-child(6) .time-label {
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .time-separator {
