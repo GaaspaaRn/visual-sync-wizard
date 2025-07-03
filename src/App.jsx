@@ -42,19 +42,21 @@ function App() {
       
       <div className="countdown-section">
         <div className="countdown-display">
-          <div className="time-unit">
-            <span className="time-number">{timeLeft.days.toString().padStart(2, '0')}</span>
-            <span className="time-label">DIAS</span>
-          </div>
-          <div className="time-separator">:</div>
-          <div className="time-unit">
-            <span className="time-number">{timeLeft.hours.toString().padStart(2, '0')}</span>
-            <span className="time-label">HORAS</span>
-          </div>
-          <div className="time-separator">:</div>
-          <div className="time-unit">
-            <span className="time-number">{timeLeft.minutes.toString().padStart(2, '0')}</span>
-            <span className="time-label">MINUTOS</span>
+          <div className="countdown-row">
+            <div className="time-unit">
+              <span className="time-number">{timeLeft.days.toString().padStart(2, '0')}</span>
+              <span className="time-label">DIAS</span>
+            </div>
+            <div className="time-separator">:</div>
+            <div className="time-unit">
+              <span className="time-number">{timeLeft.hours.toString().padStart(2, '0')}</span>
+              <span className="time-label">HORAS</span>
+            </div>
+            <div className="time-separator">:</div>
+            <div className="time-unit">
+              <span className="time-number">{timeLeft.minutes.toString().padStart(2, '0')}</span>
+              <span className="time-label">MINUTOS</span>
+            </div>
           </div>
           <div className="time-unit">
             <span className="time-number">{timeLeft.seconds.toString().padStart(2, '0')}</span>
