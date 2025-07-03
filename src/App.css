@@ -86,6 +86,13 @@
   animation: fade-in-up 2s ease-out 0.5s both;
 }
 
+.countdown-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .time-unit {
   display: flex;
   flex-direction: column;
@@ -269,11 +276,11 @@
     align-items: center;
   }
   
-  .countdown-display .countdown-row {
+  .countdown-row {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .time-number {
