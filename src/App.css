@@ -11,7 +11,7 @@
   text-align: center;
   position: relative;
   padding: 8vh 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Orbitron', monospace;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -37,20 +37,22 @@
 
 .mystery-title {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: white;
   letter-spacing: 3px;
   line-height: 1.2;
+  font-family: 'Orbitron', monospace;
 }
 
 .mystery-subtitle {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
   letter-spacing: 3px;
   line-height: 1.2;
   margin: 0;
+  font-family: 'Orbitron', monospace;
 }
 
 .countdown-section {
@@ -87,19 +89,30 @@
   font-weight: 700;
   color: white;
   margin-bottom: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Orbitron', monospace;
   text-shadow: 
-    0 0 3px #ff0000,
-    0 0 6px #ff0000;
-  animation: red-glow-pulse 2s ease-in-out infinite alternate;
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  animation: white-glow-pulse 2s ease-in-out infinite alternate;
+}
+
+.time-unit:nth-child(5) .time-number,
+.time-unit:nth-child(6) .time-number {
+  font-weight: 400;
 }
 
 .time-label {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   letter-spacing: 2px;
   animation: label-fade 2s ease-in-out infinite alternate;
+  font-family: 'Orbitron', monospace;
+}
+
+.time-unit:nth-child(5) .time-label,
+.time-unit:nth-child(6) .time-label {
+  font-weight: 400;
 }
 
 .time-separator {
@@ -108,9 +121,10 @@
   margin-top: -0.5rem;
   align-self: flex-start;
   text-shadow: 
-    0 0 3px #ff0000,
-    0 0 6px #ff0000;
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3);
   animation: separator-blink 1.5s ease-in-out infinite;
+  font-family: 'Orbitron', monospace;
 }
 
 .logo-container {
@@ -156,18 +170,18 @@
   }
 }
 
-@keyframes red-glow-pulse {
+@keyframes white-glow-pulse {
   0% {
     text-shadow: 
-      0 0 3px #ff0000,
-      0 0 6px #ff0000;
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.3);
     transform: scale(1);
   }
   100% {
     text-shadow: 
-      0 0 5px #ff0000,
-      0 0 10px #ff0000,
-      0 0 12px #ff0000;
+      0 0 15px rgba(255, 255, 255, 0.7),
+      0 0 25px rgba(255, 255, 255, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.3);
     transform: scale(1.01);
   }
 }
@@ -185,13 +199,13 @@
   0%, 60% { 
     opacity: 1; 
     text-shadow: 
-      0 0 3px #ff0000,
-      0 0 6px #ff0000;
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.3);
   }
   70%, 100% { 
     opacity: 0.5; 
     text-shadow: 
-      0 0 2px #ff0000;
+      0 0 5px rgba(255, 255, 255, 0.3);
   }
 }
 
