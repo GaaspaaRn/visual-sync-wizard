@@ -43,7 +43,7 @@ function App() {
       <div className="countdown-section">
         <div className="countdown-display">
           <div className="time-unit">
-            <span className="time-number">{timeLeft.days.toString().padStart(3, '0')}</span>
+            <span className="time-number">{timeLeft.days.toString().padStart(2, '0')}</span>
             <span className="time-label">DIAS</span>
           </div>
           <div className="time-separator">:</div>
