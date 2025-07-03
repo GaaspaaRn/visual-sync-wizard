@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Dystopian';
+  src: url('./assets/fonts/Dystopian_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dystopian';
+  src: url('./assets/fonts/Dystopian_Ligth.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 .countdown-container {
   height: 100vh;
   height: 100dvh; /* Para mobile com melhor suporte */
@@ -11,7 +25,7 @@
   text-align: center;
   position: relative;
   padding: 8vh 2rem;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Dystopian', monospace;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -42,7 +56,7 @@
   color: white;
   letter-spacing: 3px;
   line-height: 1.2;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Dystopian', monospace;
 }
 
 .mystery-subtitle {
@@ -52,7 +66,7 @@
   letter-spacing: 3px;
   line-height: 1.2;
   margin: 0;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Dystopian', monospace;
 }
 
 .countdown-section {
@@ -86,10 +100,10 @@
 
 .time-number {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 300;
   color: white;
   margin-bottom: 0.5rem;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Dystopian', monospace;
   text-shadow: 
     0 0 10px rgba(255, 255, 255, 0.5),
     0 0 20px rgba(255, 255, 255, 0.3);
@@ -98,7 +112,7 @@
 
 .time-unit:nth-child(5) .time-number,
 .time-unit:nth-child(6) .time-number {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .time-label {
@@ -107,12 +121,12 @@
   color: white;
   letter-spacing: 2px;
   animation: label-fade 2s ease-in-out infinite alternate;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Dystopian', monospace;
 }
 
 .time-unit:nth-child(5) .time-label,
 .time-unit:nth-child(6) .time-label {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .time-separator {
@@ -124,7 +138,7 @@
     0 0 10px rgba(255, 255, 255, 0.5),
     0 0 20px rgba(255, 255, 255, 0.3);
   animation: separator-blink 1.5s ease-in-out infinite;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Dystopian', monospace;
 }
 
 .logo-container {
