@@ -36,8 +36,8 @@ function App() {
   return (
     <div className="countdown-container">
       <div className="mystery-header">
-        <h1 className="mystery-title">O CHAMADO FOI FEITO.</h1>
-        <p className="mystery-subtitle">UM NOVO MOVIMENTO ESTÁ PRESTES A COMEÇAR.</p>
+        <h1 className="mystery-title">O chamado foi feito.</h1>
+        <p className="mystery-subtitle">Um novo movimento está prestes a começar.</p>
       </div>
       
       <div className="countdown-section">
