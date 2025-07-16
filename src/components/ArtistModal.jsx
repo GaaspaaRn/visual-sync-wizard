@@ -69,10 +69,12 @@ const ArtistModal = ({ selectedDJ, modalPosition, onClose }) => {
                   <span className="modal-stat-number">{selectedDJ.stats.youtubeViews}</span>
                   <span className="modal-stat-label">VISUALIZAÇÕES</span>
                 </div>
-                <div className="modal-stat-item">
-                  <span className="modal-stat-number">{selectedDJ.stats.spotifyMonthly}</span>
-                  <span className="modal-stat-label">OUVINTES/MÊS</span>
-                </div>
+                {selectedDJ.id !== 'digo' && (
+                  <div className="modal-stat-item">
+                    <span className="modal-stat-number">{selectedDJ.stats.spotifyMonthly}</span>
+                    <span className="modal-stat-label">OUVINTES/MÊS</span>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
