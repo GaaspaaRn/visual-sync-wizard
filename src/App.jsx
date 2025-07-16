@@ -374,6 +374,7 @@ function App() {
                   <div className="artist-info">
                     <h3 className="artist-name">{dj.name}</h3>
                     <div className="artist-stats">
+                      <span>{dj.stats.spotifyMonthly} ouvintes/mês</span>
                       <span>{dj.stats.youtubeSubscribers} inscritos</span>
                       <span>{dj.stats.youtubeViews} views</span>
                     </div>

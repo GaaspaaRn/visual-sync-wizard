@@ -6,6 +6,25 @@ import djDigoIdgImg from '../assets/djdigoidg.webp';
 
 export const djs = [
   {
+    id: 'rodriz',
+    name: 'DJ Rodriz',
+    artistName: 'Rodriz',
+    image: djRodrizImg,
+    youtube: 'https://www.youtube.com/@djrodriz1',
+    instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
+    spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP',
+    topTrack: 'MEGA FUNK SUSTENTA',
+    stats: {
+      youtubeSubscribers: '1.79K',
+      youtubeViews: '1,882,169',
+      youtubeVideos: '66',
+      spotifyMonthly: '83.8K'
+    },
+    bio: 'Produtor emergente na cena do megafunk, conhecido por suas batidas inovadoras e colaborações com outros artistas da região Sul.',
+    color: 'hsl(180, 100%, 50%)'
+  },
+  {
     id: 'lucas',
     name: 'DJ Lucas Henrique',
     artistName: 'Lucas Henrique',
@@ -41,25 +60,6 @@ export const djs = [
       spotifyMonthly: '3.9K'
     },
     bio: 'Thiago Correia, nascido e criado na cidade de Joinville (SC), começou a se envolver com a cena do Mega Funk em 2021, criando elementos da música eletrônica.',
-    color: 'hsl(180, 100%, 50%)'
-  },
-  {
-    id: 'rodriz',
-    name: 'DJ Rodriz',
-    artistName: 'Rodriz',
-    image: djRodrizImg,
-    youtube: 'https://www.youtube.com/@djrodriz1',
-    instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
-    spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP',
-    topTrack: 'MEGA FUNK SUSTENTA',
-    stats: {
-      youtubeSubscribers: '1.79K',
-      youtubeViews: '1,882,169',
-      youtubeVideos: '66',
-      spotifyMonthly: '83.8K'
-    },
-    bio: 'Produtor emergente na cena do megafunk, conhecido por suas batidas inovadoras e colaborações com outros artistas da região Sul.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
