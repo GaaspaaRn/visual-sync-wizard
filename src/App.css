@@ -707,7 +707,7 @@ body {
   }
   
   .artist-photo {
-    object-position: center center;
+    object-position: center 25%;
     object-fit: cover;
   }
   
