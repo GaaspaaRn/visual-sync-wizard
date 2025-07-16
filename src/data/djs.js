@@ -21,7 +21,7 @@ export const djs = [
       youtubeVideos: '66',
       spotifyMonthly: '83.8K'
     },
-    bio: 'Produtor emergente na cena do megafunk, conhecido por suas batidas inovadoras e colaborações com outros artistas da região Sul.',
+    bio: 'Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário, com colaborações ao lado de nomes de peso da cena.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -40,7 +40,7 @@ export const djs = [
       youtubeVideos: '62',
       spotifyMonthly: '26.2K'
     },
-    bio: 'DJ e produtor musical especializado em megafunk, natural de Joinville, Santa Catarina. Com um estilo único e exclusivo, Lucas Henrique vem conquistando seu espaço na cena musical.',
+    bio: 'Lucas Henrique iniciou sua carreira no Mega Funk em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.',
     color: 'hsl(180, 100%, 50%)'
   },
   {

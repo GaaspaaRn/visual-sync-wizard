@@ -149,7 +149,7 @@ const ArtistModal = ({ selectedDJ, modalPosition, onClose }) => {
         >
           <motion.button 
             className="btn-contract-transparent"
-            style={{ background: selectedDJ.color }}
+            style={{ background: `linear-gradient(135deg, hsl(180, 100%, 50%, 0.5), hsl(180, 100%, 50%))` }}
             onClick={() => {
               openWhatsApp(`Olá, gostaria de saber mais sobre o ${selectedDJ.artistName}.`);
             }}
