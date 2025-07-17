@@ -59,7 +59,7 @@ export const djs = [
       youtubeVideos: '57',
       spotifyMonthly: '3.9K'
     },
-    bio: 'Thiago Correia, nascido e criado na cidade de Joinville (SC), começou a se envolver com a cena do Mega Funk em 2021, criando elementos da música eletrônica.',
+    bio: 'Thiago Correira, mais conhecido como DJ Zatelli, Nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e produtor de Mega Funk desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena do mega funk por estar sempre inovando a cada novo som. Se apresentando em várias cidades do Sul do País, Zatelli vem conquistando cada vez mais reconhecimento e fama.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -78,7 +78,7 @@ export const djs = [
       youtubeVideos: '47',
       spotifyMonthly: '0.2K'
     },
-    bio: 'Artista versátil que combina elementos do funk tradicional com a energia do megafunk, criando um som único e envolvente.',
+    bio: 'Rodrigo (23 anos), natural de Joinville, Santa Catarina. Digo IDG começou sua carreira no Mega Funk no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. Digo IDG é um artista versátil que segue crescendo na cena do Mega Funk, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.',
     color: 'hsl(180, 100%, 50%)'
   }
 ];
