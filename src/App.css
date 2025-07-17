@@ -1138,7 +1138,7 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #000000;
+  color: #FFFFFF;
   background: rgba(0, 255, 255, 0.15) !important;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.1);
