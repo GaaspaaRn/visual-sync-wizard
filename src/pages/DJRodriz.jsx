@@ -330,7 +330,7 @@ const DJRodriz = () => {
           variants={itemVariants}
         >
           {[
-            { label: "YouTube Inscritos", value: "1.79K", icon: Youtube, color: "#ff0000" },
+            { label: "Inscritos", value: "1.79K", icon: Youtube, color: "#ff0000" },
             { label: "Visualizações", value: "1,892,169", icon: Play, color: "#00ffff" },
             { label: "Ouvintes/mês", value: "83.8K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
