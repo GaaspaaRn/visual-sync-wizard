@@ -193,7 +193,7 @@ const DJPageLayout = ({ dj, youtubeVideoId }) => {
                     width="100%"
                     height="352"
                     frameBorder="0"
-                    allowFullScreen
+                    allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"
                     title={`${dj.name} - Spotify Track`}
