@@ -184,13 +184,18 @@ const DJPageLayout = ({ dj, youtubeVideoId }) => {
 
               {/* Spotify Player */}
               <div className="media-item">
-                <h3 className="media-title">TOP TRACK</h3>
+                <h3 className="media-title">MÚSICA MAIS OUVIDA</h3>
                 <div className="spotify-player">
                   <iframe
+                    data-testid="embed-iframe"
+                    style={{borderRadius: '12px'}}
                     src={dj.spotifyEmbed}
+                    width="100%"
+                    height="352"
                     frameBorder="0"
-                    allowtransparency="true"
-                    allow="encrypted-media"
+                    allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
                     title={`${dj.name} - Spotify Track`}
                   />
                 </div>
