@@ -2,25 +2,43 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://gruvlabel.vercel.app/sitemap.xml
+Sitemap: https://gruvlabel.com/sitemap.xml
 
 # Block access to admin areas (if any)
 Disallow: /admin/
 Disallow: /private/
 Disallow: /.env
 Disallow: /config/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.json
 
 # Allow all search engines to crawl the site
 # Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
-# Crawl delay (optional, helps with server load)
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Crawl delay (helps with server load)
 Crawl-delay: 1
 
