@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause, Instagram, Youtube, Music } from 'lucide-react';
+import djRodrizImage from '../assets/djrodriz.webp';
 
 const DJRodriz = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -48,12 +49,12 @@ const DJRodriz = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(to bottom right, #1a202c, #000000, #2d3748)',
+      background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)',
       color: 'white',
       overflow: 'hidden',
-      padding: '2rem 0'
+      fontFamily: "'Montserrat', sans-serif"
     }}>
-      {/* Background Animation */}
+      {/* Background Animation - Gruv Label Style */}
       <div style={{
         position: 'fixed',
         inset: 0,
@@ -62,30 +63,30 @@ const DJRodriz = () => {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to right, rgba(6, 182, 212, 0.1), rgba(128, 0, 128, 0.1))',
-          animation: 'pulse 4s infinite'
+          background: 'linear-gradient(45deg, rgba(0, 255, 255, 0.05), rgba(0, 255, 255, 0.1))',
+          animation: 'pulse 6s infinite'
         }}></div>
         <div style={{
           position: 'absolute',
-          top: '25%',
-          left: '25%',
-          width: '24rem',
-          height: '24rem',
-          background: 'rgba(6, 182, 212, 0.2)',
-          borderRadius: '9999px',
-          filter: 'blur(3rem)',
-          animation: 'bounce 3s infinite'
+          top: '20%',
+          left: '10%',
+          width: '20rem',
+          height: '20rem',
+          background: 'radial-gradient(circle, rgba(0, 255, 255, 0.15), transparent)',
+          borderRadius: '50%',
+          filter: 'blur(40px)',
+          animation: 'float 8s infinite ease-in-out'
         }}></div>
         <div style={{
           position: 'absolute',
-          bottom: '25%',
-          right: '25%',
-          width: '24rem',
-          height: '24rem',
-          background: 'rgba(128, 0, 128, 0.2)',
-          borderRadius: '9999px',
-          filter: 'blur(3rem)',
-          animation: 'bounce 3s infinite 1s'
+          bottom: '20%',
+          right: '10%',
+          width: '25rem',
+          height: '25rem',
+          background: 'radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent)',
+          borderRadius: '50%',
+          filter: 'blur(50px)',
+          animation: 'float 10s infinite ease-in-out reverse'
         }}></div>
       </div>
 
@@ -93,9 +94,9 @@ const DJRodriz = () => {
         style={{
           position: 'relative',
           zIndex: 10,
-          maxWidth: '1280px',
+          maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 1rem'
+          padding: '2rem 1rem'
         }}
         variants={containerVariants}
         initial="hidden"
@@ -105,7 +106,7 @@ const DJRodriz = () => {
         <motion.div 
           style={{
             textAlign: 'center',
-            marginBottom: '3rem'
+            marginBottom: '4rem'
           }}
           variants={itemVariants}
         >
@@ -113,65 +114,67 @@ const DJRodriz = () => {
             style={{
               position: 'relative',
               display: 'inline-block',
-              marginBottom: '1.5rem'
+              marginBottom: '2rem'
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div style={{
-              width: '12rem',
-              height: '12rem',
+              width: '200px',
+              height: '200px',
               margin: '0 auto',
-              borderRadius: '9999px',
-              background: 'linear-gradient(to right, #06b6d4, #800080)',
-              padding: '0.25rem'
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
+              padding: '4px',
+              boxShadow: '0 0 30px rgba(0, 255, 255, 0.5)'
             }}>
               <div style={{
                 width: '100%',
                 height: '100%',
-                borderRadius: '9999px',
-                background: '#1a202c',
+                borderRadius: '50%',
+                background: '#000',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                overflow: 'hidden'
               }}>
-                <div style={{
-                  width: '10rem',
-                  height: '10rem',
-                  borderRadius: '9999px',
-                  background: 'linear-gradient(to right, #06b6d4, #800080)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '3rem',
-                  fontWeight: 'bold'
-                }}>
-                  R
-                </div>
+                <img 
+                  src={djRodrizImage} 
+                  alt="DJ Rodriz"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '50%'
+                  }}
+                />
               </div>
             </div>
             <motion.div
               style={{
                 position: 'absolute',
-                inset: '-1rem',
-                background: 'linear-gradient(to right, #06b6d4, #800080)',
-                borderRadius: '9999px',
-                filter: 'blur(1rem)',
-                opacity: 0.3
+                inset: '-8px',
+                background: 'linear-gradient(135deg, #00ffff, #00cccc)',
+                borderRadius: '50%',
+                filter: 'blur(15px)',
+                opacity: 0.4,
+                zIndex: -1
               }}
               animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             />
           </motion.div>
           
           <motion.h1 
             style={{
-              fontSize: '3.75rem',
+              fontSize: 'clamp(2.5rem, 8vw, 4rem)',
               fontWeight: 'bold',
               marginBottom: '1rem',
-              background: 'linear-gradient(to right, #06b6d4, #800080)',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif",
+              background: 'linear-gradient(135deg, #00ffff, #ffffff)',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(0, 255, 255, 0.3)'
             }}
             variants={itemVariants}
           >
@@ -180,11 +183,12 @@ const DJRodriz = () => {
           
           <motion.p 
             style={{
-              fontSize: '1.25rem',
-              color: '#d1d5db',
-              maxWidth: '48rem',
+              fontSize: '1.1rem',
+              color: '#cccccc',
+              maxWidth: '600px',
               margin: '0 auto',
-              lineHeight: '1.625'
+              lineHeight: '1.6',
+              fontWeight: '300'
             }}
             variants={itemVariants}
           >
@@ -192,55 +196,59 @@ const DJRodriz = () => {
           </motion.p>
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats - Gruv Label Style */}
         <motion.div 
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '2rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '1.5rem',
             marginBottom: '4rem'
           }}
           variants={itemVariants}
         >
           {[
-            { label: "YouTube Inscritos", value: "1.79K", icon: Youtube },
-            { label: "Visualizações", value: "1,882,169", icon: Play },
-            { label: "Ouvintes/mês", value: "83.8K", icon: Music }
+            { label: "YouTube Inscritos", value: "1.79K", icon: Youtube, color: "#ff0000" },
+            { label: "Visualizações", value: "1,882,169", icon: Play, color: "#00ffff" },
+            { label: "Ouvintes/mês", value: "83.8K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
               key={index}
               style={{
-                background: 'rgba(31, 41, 55, 0.5)',
-                backdropFilter: 'blur(8px)',
-                borderRadius: '1rem',
-                padding: '2rem',
+                background: 'rgba(0, 0, 0, 0.6)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: '16px',
+                padding: '2rem 1.5rem',
                 textAlign: 'center',
-                border: '1px solid rgba(75, 85, 99, 0.5)'
+                border: '1px solid rgba(0, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
               }}
               variants={statsVariants}
               whileHover={{
                 scale: 1.05,
-                boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3)'
+                boxShadow: '0 10px 30px rgba(0, 255, 255, 0.2)',
+                borderColor: 'rgba(0, 255, 255, 0.5)'
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <stat.icon style={{
-                width: '3rem',
-                height: '3rem',
+                width: '2.5rem',
+                height: '2.5rem',
                 margin: '0 auto 1rem',
-                color: '#06b6d4'
+                color: stat.color
               }} />
               <div style={{
-                fontSize: '1.875rem',
+                fontSize: '2rem',
                 fontWeight: 'bold',
-                color: '#06b6d4',
-                marginBottom: '0.5rem'
+                color: '#00ffff',
+                marginBottom: '0.5rem',
+                fontFamily: "'Dystopian', 'Montserrat', sans-serif"
               }}>{stat.value}</div>
               <div style={{
-                color: '#d1d5db',
+                color: '#999',
                 textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                fontSize: '0.875rem'
+                letterSpacing: '0.5px',
+                fontSize: '0.85rem',
+                fontWeight: '500'
               }}>{stat.label}</div>
             </motion.div>
           ))}
@@ -250,8 +258,8 @@ const DJRodriz = () => {
         <motion.div 
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '3rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '2rem',
             marginBottom: '4rem'
           }}
           variants={itemVariants}
@@ -259,13 +267,16 @@ const DJRodriz = () => {
           {/* YouTube Player */}
           <motion.div
             style={{
-              background: 'rgba(31, 41, 55, 0.5)',
-              backdropFilter: 'blur(8px)',
-              borderRadius: '1rem',
+              background: 'rgba(0, 0, 0, 0.6)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '20px',
               padding: '2rem',
-              border: '1px solid rgba(75, 85, 99, 0.5)'
+              border: '1px solid rgba(0, 255, 255, 0.2)'
             }}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: '0 15px 40px rgba(0, 255, 255, 0.15)'
+            }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <h3 style={{
@@ -273,14 +284,16 @@ const DJRodriz = () => {
               fontWeight: 'bold',
               marginBottom: '1.5rem',
               textAlign: 'center',
-              color: '#06b6d4'
+              color: '#00ffff',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif"
             }}>
               🎵 Música no YouTube
             </h3>
             <div style={{
               aspectRatio: '16 / 9',
-              borderRadius: '0.75rem',
-              overflow: 'hidden'
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)'
             }}>
               <iframe
                 width="100%"
@@ -290,7 +303,7 @@ const DJRodriz = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                style={{ borderRadius: '0.75rem' }}
+                style={{ borderRadius: '12px' }}
               ></iframe>
             </div>
           </motion.div>
@@ -298,13 +311,16 @@ const DJRodriz = () => {
           {/* Spotify Player */}
           <motion.div
             style={{
-              background: 'rgba(31, 41, 55, 0.5)',
-              backdropFilter: 'blur(8px)',
-              borderRadius: '1rem',
+              background: 'rgba(0, 0, 0, 0.6)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '20px',
               padding: '2rem',
-              border: '1px solid rgba(75, 85, 99, 0.5)'
+              border: '1px solid rgba(0, 255, 255, 0.2)'
             }}
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ 
+              scale: 1.02,
+              boxShadow: '0 15px 40px rgba(0, 255, 255, 0.15)'
+            }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <h3 style={{
@@ -312,13 +328,15 @@ const DJRodriz = () => {
               fontWeight: 'bold',
               marginBottom: '1.5rem',
               textAlign: 'center',
-              color: '#22c55e'
+              color: '#1db954',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif"
             }}>
               🎧 Ouça no Spotify
             </h3>
             <div style={{
-              borderRadius: '0.75rem',
-              overflow: 'hidden'
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)'
             }}>
               <iframe 
                 data-testid="embed-iframe" 
@@ -335,7 +353,7 @@ const DJRodriz = () => {
           </motion.div>
         </motion.div>
 
-        {/* Social Media */}
+        {/* Social Media - Gruv Label Style */}
         <motion.div 
           style={{
             textAlign: 'center',
@@ -344,45 +362,50 @@ const DJRodriz = () => {
           variants={itemVariants}
         >
           <h3 style={{
-            fontSize: '2.25rem',
+            fontSize: '2rem',
             fontWeight: 'bold',
             marginBottom: '2rem',
-            color: '#06b6d4'
+            color: '#00ffff',
+            fontFamily: "'Dystopian', 'Montserrat', sans-serif"
           }}>Redes Sociais</h3>
           <div style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '2rem'
+            gap: '1.5rem',
+            flexWrap: 'wrap'
           }}>
             {[
-              { icon: Youtube, label: "YouTube", color: "#ef4444", bg: "rgba(239, 68, 68, 0.2)" },
-              { icon: Instagram, label: "Instagram", color: "#ec4899", bg: "rgba(236, 72, 153, 0.2)" },
-              { icon: Music, label: "Spotify", color: "#22c55e", bg: "rgba(34, 197, 94, 0.2)" }
+              { icon: Youtube, label: "YouTube", color: "#ff0000", bg: "rgba(255, 0, 0, 0.1)" },
+              { icon: Instagram, label: "Instagram", color: "#e4405f", bg: "rgba(228, 64, 95, 0.1)" },
+              { icon: Music, label: "Spotify", color: "#1db954", bg: "rgba(29, 185, 84, 0.1)" }
             ].map((social, index) => (
               <motion.button
                 key={index}
                 style={{
                   background: social.bg,
                   color: social.color,
-                  padding: '1.5rem',
-                  borderRadius: '1rem',
-                  border: '1px solid rgba(75, 85, 99, 0.5)',
-                  transition: 'all 0.3s ease-in-out'
+                  padding: '1.2rem',
+                  borderRadius: '16px',
+                  border: `1px solid ${social.color}30`,
+                  transition: 'all 0.3s ease',
+                  backdropFilter: 'blur(10px)',
+                  cursor: 'pointer'
                 }}
                 whileHover={{
                   scale: 1.1,
-                  boxShadow: '0 10px 30px rgba(255, 255, 255, 0.1)'
+                  boxShadow: `0 10px 25px ${social.color}40`,
+                  borderColor: `${social.color}80`
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <social.icon style={{ width: '2rem', height: '2rem', marginBottom: '0.5rem' }} />
-                <div style={{ fontSize: '0.875rem', fontWeight: '500' }}>{social.label}</div>
+                <social.icon style={{ width: '1.8rem', height: '1.8rem', marginBottom: '0.5rem' }} />
+                <div style={{ fontSize: '0.85rem', fontWeight: '600' }}>{social.label}</div>
               </motion.button>
             ))}
           </div>
         </motion.div>
 
-        {/* CTA Button */}
+        {/* CTA Button - Gruv Label Style */}
         <motion.div 
           style={{
             textAlign: 'center'
@@ -391,18 +414,24 @@ const DJRodriz = () => {
         >
           <motion.button
             style={{
-              background: 'linear-gradient(to right, #06b6d4, #800080)',
-              color: 'white',
-              padding: '1rem 3rem',
-              borderRadius: '9999px',
-              fontSize: '1.25rem',
+              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
+              color: '#000',
+              padding: '1rem 2.5rem',
+              borderRadius: '50px',
+              fontSize: '1.1rem',
               fontWeight: 'bold',
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-              transition: 'all 0.3s ease-in-out'
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 10px 30px rgba(0, 255, 255, 0.3)',
+              transition: 'all 0.3s ease',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif",
+              textTransform: 'uppercase',
+              letterSpacing: '1px'
             }}
             whileHover={{
               scale: 1.05,
-              boxShadow: '0 20px 40px rgba(6, 182, 212, 0.4)'
+              boxShadow: '0 15px 40px rgba(0, 255, 255, 0.5)',
+              background: 'linear-gradient(135deg, #00cccc, #00ffff)'
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -411,6 +440,19 @@ const DJRodriz = () => {
           </motion.button>
         </motion.div>
       </motion.div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.8; }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+      `}</style>
     </div>
   );
 };
