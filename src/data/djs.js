@@ -12,7 +12,7 @@ export const djs = [
     image: djRodrizImg,
     youtube: 'https://www.youtube.com/@djrodriz1',
     instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
-    spotifyEmbed: 'https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator&theme=0',
+    spotifyEmbed: 'https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP',
     topTrack: 'MEGA FUNK SUSTENTA',
     stats: {
@@ -31,7 +31,7 @@ export const djs = [
     image: djLucasHenriqueImg,
     youtube: 'https://www.youtube.com/channel/UCnvOrXyqGdK2AFrYcAQAwyg',
     instagram: 'https://www.instagram.com/djlucashenrique_/',
-    spotifyEmbed: 'https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator&theme=0',
+    spotifyEmbed: 'https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/0auLP5j5MbnqMRXmdlvub9',
     topTrack: 'MEGA PROMISCUOUS',
     stats: {
@@ -50,7 +50,7 @@ export const djs = [
     image: djZatelliImg,
     youtube: 'https://www.youtube.com/@DjZatelli',
     instagram: 'https://www.instagram.com/djzatelli/',
-    spotifyEmbed: 'https://open.spotify.com/embed/track/6BlnhPe8oMmJndqOneit2U?utm_source=generator&theme=0',
+    spotifyEmbed: 'https://open.spotify.com/embed/track/6BlnhPe8oMmJndqOneit2U?utm_source=generator',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/5WXA9QsuHzbaB696vr1Hkg',
     topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
     stats: {
@@ -69,7 +69,7 @@ export const djs = [
     image: djDigoIdgImg,
     youtube: 'https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ',
     instagram: 'https://www.instagram.com/digoidg/',
-    spotifyEmbed: 'https://open.spotify.com/embed/track/2UR8zmsZgwCJ0dwnlpY9KN?utm_source=generator&theme=0',
+    spotifyEmbed: 'https://open.spotify.com/embed/track/2UR8zmsZgwCJ0dwnlpY9KN?utm_source=generator',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/7ff4I1cuWy9xBpTaYeinvv',
     topTrack: 'Mega Senta Fumadona',
     stats: {
