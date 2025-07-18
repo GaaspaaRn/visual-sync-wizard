@@ -23,5 +23,13 @@ export default defineConfig(({ mode }) => {
       host: "::",
       port: 8080,
     },
+    optimizeDeps: {
+      force: true
+    },
+    build: {
+      rollupOptions: {
+        external: []
+      }
+    }
   }
 })
