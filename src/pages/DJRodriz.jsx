@@ -46,53 +46,146 @@ const DJRodriz = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(to bottom right, #1a202c, #000000, #2d3748)',
+      color: 'white',
+      overflow: 'hidden',
+      padding: '2rem 0'
+    }}>
       {/* Background Animation */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 animate-pulse"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-bounce"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-bounce delay-1000"></div>
+      <div style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 0
+      }}>
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(to right, rgba(6, 182, 212, 0.1), rgba(128, 0, 128, 0.1))',
+          animation: 'pulse 4s infinite'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          top: '25%',
+          left: '25%',
+          width: '24rem',
+          height: '24rem',
+          background: 'rgba(6, 182, 212, 0.2)',
+          borderRadius: '9999px',
+          filter: 'blur(3rem)',
+          animation: 'bounce 3s infinite'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          bottom: '25%',
+          right: '25%',
+          width: '24rem',
+          height: '24rem',
+          background: 'rgba(128, 0, 128, 0.2)',
+          borderRadius: '9999px',
+          filter: 'blur(3rem)',
+          animation: 'bounce 3s infinite 1s'
+        }}></div>
       </div>
 
       <motion.div
-        className="relative z-10 container mx-auto px-4 py-8"
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1rem'
+        }}
         variants={containerVariants}
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}
       >
         {/* Header */}
         <motion.div 
-          className="text-center mb-12"
+          style={{
+            textAlign: 'center',
+            marginBottom: '3rem'
+          }}
           variants={itemVariants}
         >
           <motion.div
-            className="relative inline-block mb-6"
+            style={{
+              position: 'relative',
+              display: 'inline-block',
+              marginBottom: '1.5rem'
+            }}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 p-1">
-              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                <div className="w-40 h-40 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-6xl font-bold">
+            <div style={{
+              width: '12rem',
+              height: '12rem',
+              margin: '0 auto',
+              borderRadius: '9999px',
+              background: 'linear-gradient(to right, #06b6d4, #800080)',
+              padding: '0.25rem'
+            }}>
+              <div style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '9999px',
+                background: '#1a202c',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <div style={{
+                  width: '10rem',
+                  height: '10rem',
+                  borderRadius: '9999px',
+                  background: 'linear-gradient(to right, #06b6d4, #800080)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '3rem',
+                  fontWeight: 'bold'
+                }}>
                   R
                 </div>
               </div>
             </div>
             <motion.div
-              className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur-lg opacity-30"
+              style={{
+                position: 'absolute',
+                inset: '-1rem',
+                background: 'linear-gradient(to right, #06b6d4, #800080)',
+                borderRadius: '9999px',
+                filter: 'blur(1rem)',
+                opacity: 0.3
+              }}
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             />
           </motion.div>
           
           <motion.h1 
-            className="text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
+            style={{
+              fontSize: '3.75rem',
+              fontWeight: 'bold',
+              marginBottom: '1rem',
+              background: 'linear-gradient(to right, #06b6d4, #800080)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}
             variants={itemVariants}
           >
             DJ Rodriz
           </motion.h1>
           
           <motion.p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            style={{
+              fontSize: '1.25rem',
+              color: '#d1d5db',
+              maxWidth: '48rem',
+              margin: '0 auto',
+              lineHeight: '1.625'
+            }}
             variants={itemVariants}
           >
             Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário, com colaborações ao lado de nomes de peso da cena.
@@ -101,7 +194,12 @@ const DJRodriz = () => {
 
         {/* Stats */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '2rem',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
           {[
@@ -111,36 +209,79 @@ const DJRodriz = () => {
           ].map((stat, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 text-center border border-gray-700/50"
+              style={{
+                background: 'rgba(31, 41, 55, 0.5)',
+                backdropFilter: 'blur(8px)',
+                borderRadius: '1rem',
+                padding: '2rem',
+                textAlign: 'center',
+                border: '1px solid rgba(75, 85, 99, 0.5)'
+              }}
               variants={statsVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(6, 182, 212, 0.3)"
+                boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3)'
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <stat.icon className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300 uppercase tracking-wider text-sm">{stat.label}</div>
+              <stat.icon style={{
+                width: '3rem',
+                height: '3rem',
+                margin: '0 auto 1rem',
+                color: '#06b6d4'
+              }} />
+              <div style={{
+                fontSize: '1.875rem',
+                fontWeight: 'bold',
+                color: '#06b6d4',
+                marginBottom: '0.5rem'
+              }}>{stat.value}</div>
+              <div style={{
+                color: '#d1d5db',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                fontSize: '0.875rem'
+              }}>{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Players Section */}
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '3rem',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
           {/* YouTube Player */}
           <motion.div
-            className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50"
+            style={{
+              background: 'rgba(31, 41, 55, 0.5)',
+              backdropFilter: 'blur(8px)',
+              borderRadius: '1rem',
+              padding: '2rem',
+              border: '1px solid rgba(75, 85, 99, 0.5)'
+            }}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-center text-cyan-400">
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              marginBottom: '1.5rem',
+              textAlign: 'center',
+              color: '#06b6d4'
+            }}>
               🎵 Música no YouTube
             </h3>
-            <div className="aspect-video rounded-xl overflow-hidden">
+            <div style={{
+              aspectRatio: '16 / 9',
+              borderRadius: '0.75rem',
+              overflow: 'hidden'
+            }}>
               <iframe
                 width="100%"
                 height="100%"
@@ -149,21 +290,36 @@ const DJRodriz = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="rounded-xl"
+                style={{ borderRadius: '0.75rem' }}
               ></iframe>
             </div>
           </motion.div>
 
           {/* Spotify Player */}
           <motion.div
-            className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50"
+            style={{
+              background: 'rgba(31, 41, 55, 0.5)',
+              backdropFilter: 'blur(8px)',
+              borderRadius: '1rem',
+              padding: '2rem',
+              border: '1px solid rgba(75, 85, 99, 0.5)'
+            }}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-center text-green-400">
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              marginBottom: '1.5rem',
+              textAlign: 'center',
+              color: '#22c55e'
+            }}>
               🎧 Ouça no Spotify
             </h3>
-            <div className="rounded-xl overflow-hidden">
+            <div style={{
+              borderRadius: '0.75rem',
+              overflow: 'hidden'
+            }}>
               <iframe 
                 data-testid="embed-iframe" 
                 style={{borderRadius: '12px'}} 
@@ -181,27 +337,46 @@ const DJRodriz = () => {
 
         {/* Social Media */}
         <motion.div 
-          className="text-center mb-16"
+          style={{
+            textAlign: 'center',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
-          <h3 className="text-3xl font-bold mb-8 text-cyan-400">Redes Sociais</h3>
-          <div className="flex justify-center space-x-8">
+          <h3 style={{
+            fontSize: '2.25rem',
+            fontWeight: 'bold',
+            marginBottom: '2rem',
+            color: '#06b6d4'
+          }}>Redes Sociais</h3>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '2rem'
+          }}>
             {[
-              { icon: Youtube, label: "YouTube", color: "text-red-500", bg: "bg-red-500/20" },
-              { icon: Instagram, label: "Instagram", color: "text-pink-500", bg: "bg-pink-500/20" },
-              { icon: Music, label: "Spotify", color: "text-green-500", bg: "bg-green-500/20" }
+              { icon: Youtube, label: "YouTube", color: "#ef4444", bg: "rgba(239, 68, 68, 0.2)" },
+              { icon: Instagram, label: "Instagram", color: "#ec4899", bg: "rgba(236, 72, 153, 0.2)" },
+              { icon: Music, label: "Spotify", color: "#22c55e", bg: "rgba(34, 197, 94, 0.2)" }
             ].map((social, index) => (
               <motion.button
                 key={index}
-                className={`${social.bg} ${social.color} p-6 rounded-2xl border border-gray-700/50 hover:border-gray-500/50 transition-all duration-300`}
-                whileHover={{ 
+                style={{
+                  background: social.bg,
+                  color: social.color,
+                  padding: '1.5rem',
+                  borderRadius: '1rem',
+                  border: '1px solid rgba(75, 85, 99, 0.5)',
+                  transition: 'all 0.3s ease-in-out'
+                }}
+                whileHover={{
                   scale: 1.1,
-                  boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)"
+                  boxShadow: '0 10px 30px rgba(255, 255, 255, 0.1)'
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <social.icon className="w-8 h-8 mb-2" />
-                <div className="text-sm font-medium">{social.label}</div>
+                <social.icon style={{ width: '2rem', height: '2rem', marginBottom: '0.5rem' }} />
+                <div style={{ fontSize: '0.875rem', fontWeight: '500' }}>{social.label}</div>
               </motion.button>
             ))}
           </div>
@@ -209,14 +384,25 @@ const DJRodriz = () => {
 
         {/* CTA Button */}
         <motion.div 
-          className="text-center"
+          style={{
+            textAlign: 'center'
+          }}
           variants={itemVariants}
         >
           <motion.button
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-bold shadow-2xl"
-            whileHover={{ 
+            style={{
+              background: 'linear-gradient(to right, #06b6d4, #800080)',
+              color: 'white',
+              padding: '1rem 3rem',
+              borderRadius: '9999px',
+              fontSize: '1.25rem',
+              fontWeight: 'bold',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              transition: 'all 0.3s ease-in-out'
+            }}
+            whileHover={{
               scale: 1.05,
-              boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
+              boxShadow: '0 20px 40px rgba(6, 182, 212, 0.4)'
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
