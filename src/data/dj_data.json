@@ -1,0 +1,46 @@
+{
+  "rodriz": {
+    "nome": "DJ Rodriz",
+    "biografia": "Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário, com colaborações ao lado de nomes de peso da cena.",
+    "estatisticas": {
+      "youtube_inscritos": "1.79K",
+      "visualizacoes": "1,882,169",
+      "ouvintes_mes": "83.8K"
+    },
+    "youtube_link": "https://www.youtube.com/watch?v=VRfHI0rjPuQ",
+    "spotify_embed": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+  },
+  "lucashenrique": {
+    "nome": "DJ Lucas Henrique",
+    "biografia": "Lucas Henrique iniciou sua carreira no Mega Funk em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.",
+    "estatisticas": {
+      "youtube_inscritos": "8.8K",
+      "visualizacoes": "3,001,231",
+      "ouvintes_mes": "26.2K"
+    },
+    "youtube_link": "https://www.youtube.com/watch?v=MIWyA_0k4L0",
+    "spotify_embed": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+  },
+  "zatelli": {
+    "nome": "DJ Zatelli",
+    "biografia": "Thiago Correira, mais conhecido como DJ Zatelli, Nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e produtor de Mega Funk desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena do mega funk por estar sempre inovando a cada novo som. Se apresentando em várias cidades do Sul do País, Zatelli vem conquistando cada vez mais reconhecimento e fama.",
+    "estatisticas": {
+      "youtube_inscritos": "6.31K",
+      "visualizacoes": "1,848,406",
+      "ouvintes_mes": "3.9K"
+    },
+    "youtube_link": "https://www.youtube.com/watch?v=wkBYS1pkY8s",
+    "spotify_embed": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/6BlnhPe8oMmJndqOneit2U?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+  },
+  "digoidg": {
+    "nome": "Digo IDG",
+    "biografia": "Rodrigo (23 anos), natural de Joinville, Santa Catarina. Digo IDG começou sua carreira no Mega Funk no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. Digo IDG é um artista versátil que segue crescendo na cena do Mega Funk, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.",
+    "estatisticas": {
+      "youtube_inscritos": "2.46K",
+      "visualizacoes": "627,512"
+    },
+    "youtube_link": "https://www.youtube.com/watch?v=J4SezJtNvq8",
+    "spotify_embed": "<iframe data-testid=\"embed-iframe\" style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/2UR8zmsZgwCJ0dwnlpY9KN?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+  }
+}
+
