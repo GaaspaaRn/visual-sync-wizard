@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Pause, Instagram, Youtube, Music } from 'lucide-react';
+import { Play, Instagram, Youtube, Music } from 'lucide-react';
+import djLucasHenriqueImage from '../assets/djlucashenrique.webp';
 
 const DJLucasHenrique = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -46,101 +46,254 @@ const DJLucasHenrique = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
-      {/* Background Animation */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-pulse"></div>
-        <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-bounce"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-bounce delay-1000"></div>
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)',
+      color: 'white',
+      overflow: 'hidden',
+      fontFamily: "'Montserrat', sans-serif"
+    }}>
+      {/* Background Animation - Gruv Label Style */}
+      <div style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 0
+      }}>
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(45deg, rgba(0, 255, 255, 0.05), rgba(0, 255, 255, 0.1))',
+          animation: 'pulse 6s infinite'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          top: '20%',
+          left: '10%',
+          width: '20rem',
+          height: '20rem',
+          background: 'radial-gradient(circle, rgba(0, 255, 255, 0.15), transparent)',
+          borderRadius: '50%',
+          filter: 'blur(40px)',
+          animation: 'float 8s infinite ease-in-out'
+        }}></div>
+        <div style={{
+          position: 'absolute',
+          bottom: '20%',
+          right: '10%',
+          width: '25rem',
+          height: '25rem',
+          background: 'radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent)',
+          borderRadius: '50%',
+          filter: 'blur(50px)',
+          animation: 'float 10s infinite ease-in-out reverse'
+        }}></div>
       </div>
 
       <motion.div
-        className="relative z-10 container mx-auto px-4 py-8"
+        style={{
+          position: 'relative',
+          zIndex: 10,
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '2rem 1rem'
+        }}
         variants={containerVariants}
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}
       >
         {/* Header */}
         <motion.div 
-          className="text-center mb-12"
+          style={{
+            textAlign: 'center',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
           <motion.div
-            className="relative inline-block mb-6"
+            style={{
+              position: 'relative',
+              display: 'inline-block',
+              marginBottom: '2rem'
+            }}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 p-1">
-              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                <div className="w-40 h-40 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-5xl font-bold">
-                  LH
-                </div>
+            <div style={{
+              width: '200px',
+              height: '200px',
+              margin: '0 auto',
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
+              padding: '4px',
+              boxShadow: '0 0 30px rgba(0, 255, 255, 0.5)'
+            }}>
+              <div style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                background: '#000',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden'
+              }}>
+                <img 
+                  src={djLucasHenriqueImage} 
+                  alt="DJ Lucas Henrique"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '50%'
+                  }}
+                />
               </div>
             </div>
             <motion.div
-              className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full blur-lg opacity-30"
+              style={{
+                position: 'absolute',
+                inset: '-8px',
+                background: 'linear-gradient(135deg, #00ffff, #00cccc)',
+                borderRadius: '50%',
+                filter: 'blur(15px)',
+                opacity: 0.4,
+                zIndex: -1
+              }}
               animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             />
           </motion.div>
           
           <motion.h1 
-            className="text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"
+            style={{
+              fontSize: 'clamp(2.5rem, 8vw, 4rem)',
+              fontWeight: 'bold',
+              marginBottom: '1rem',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif",
+              background: 'linear-gradient(135deg, #00ffff, #ffffff)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(0, 255, 255, 0.3)'
+            }}
             variants={itemVariants}
           >
             DJ Lucas Henrique
           </motion.h1>
           
           <motion.p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            style={{
+              fontSize: '1.1rem',
+              color: '#cccccc',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6',
+              fontWeight: '300'
+            }}
             variants={itemVariants}
           >
             Lucas Henrique iniciou sua carreira no Mega Funk em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.
           </motion.p>
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats - Gruv Label Style */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
           {[
-            { label: "YouTube Inscritos", value: "8.8K", icon: Youtube },
-            { label: "Visualizações", value: "3,001,231", icon: Play },
-            { label: "Ouvintes/mês", value: "26.2K", icon: Music }
+            { label: "YouTube Inscritos", value: "8.8K", icon: Youtube, color: "#ff0000" },
+            { label: "Visualizações", value: "3,001,231", icon: Play, color: "#00ffff" },
+            { label: "Ouvintes/mês", value: "26.2K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 text-center border border-gray-700/50"
+              style={{
+                background: 'rgba(0, 0, 0, 0.6)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: '16px',
+                padding: '2rem 1.5rem',
+                textAlign: 'center',
+                border: '1px solid rgba(0, 255, 255, 0.2)',
+                transition: 'all 0.3s ease'
+              }}
               variants={statsVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(6, 182, 212, 0.3)"
+                boxShadow: '0 10px 30px rgba(0, 255, 255, 0.2)',
+                borderColor: 'rgba(0, 255, 255, 0.5)'
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <stat.icon className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300 uppercase tracking-wider text-sm">{stat.label}</div>
+              <stat.icon style={{
+                width: '2.5rem',
+                height: '2.5rem',
+                margin: '0 auto 1rem',
+                color: stat.color
+              }} />
+              <div style={{
+                fontSize: '2rem',
+                fontWeight: 'bold',
+                color: '#00ffff',
+                marginBottom: '0.5rem',
+                fontFamily: "'Dystopian', 'Montserrat', sans-serif"
+              }}>{stat.value}</div>
+              <div style={{
+                color: '#999',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                fontSize: '0.85rem',
+                fontWeight: '500'
+              }}>{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Players Section */}
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gap: '2rem',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
           {/* YouTube Player */}
           <motion.div
-            className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50"
-            whileHover={{ scale: 1.02 }}
+            style={{
+              background: 'rgba(0, 0, 0, 0.6)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '20px',
+              padding: '2rem',
+              border: '1px solid rgba(0, 255, 255, 0.2)'
+            }}
+            whileHover={{
+              scale: 1.02,
+              boxShadow: '0 15px 40px rgba(0, 255, 255, 0.15)'
+            }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-center text-cyan-400">
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              marginBottom: '1.5rem',
+              textAlign: 'center',
+              color: '#00ffff',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif"
+            }}>
               🎵 Música no YouTube
             </h3>
-            <div className="aspect-video rounded-xl overflow-hidden">
+            <div style={{
+              aspectRatio: '16 / 9',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)'
+            }}>
               <iframe
                 width="100%"
                 height="100%"
@@ -149,21 +302,41 @@ const DJLucasHenrique = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="rounded-xl"
+                style={{ borderRadius: '12px' }}
               ></iframe>
             </div>
           </motion.div>
 
           {/* Spotify Player */}
           <motion.div
-            className="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50"
-            whileHover={{ scale: 1.02 }}
+            style={{
+              background: 'rgba(0, 0, 0, 0.6)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: '20px',
+              padding: '2rem',
+              border: '1px solid rgba(0, 255, 255, 0.2)'
+            }}
+            whileHover={{
+              scale: 1.02,
+              boxShadow: '0 15px 40px rgba(0, 255, 255, 0.15)'
+            }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-center text-green-400">
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              marginBottom: '1.5rem',
+              textAlign: 'center',
+              color: '#1db954',
+              fontFamily: "'Dystopian', 'Montserrat', sans-serif"
+            }}>
               🎧 Ouça no Spotify
             </h3>
-            <div className="rounded-xl overflow-hidden">
+            <div style={{
+              borderRadius: '12px',
+              overflow: 'hidden',
+              boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)'
+            }}>
               <iframe 
                 data-testid="embed-iframe" 
                 style={{borderRadius: '12px'}} 
@@ -179,52 +352,148 @@ const DJLucasHenrique = () => {
           </motion.div>
         </motion.div>
 
-        {/* Social Media */}
+        {/* Social Media - Gruv Label Style */}
         <motion.div 
-          className="text-center mb-16"
+          style={{
+            textAlign: 'center',
+            marginBottom: '4rem'
+          }}
           variants={itemVariants}
         >
-          <h3 className="text-3xl font-bold mb-8 text-cyan-400">Redes Sociais</h3>
-          <div className="flex justify-center space-x-8">
-            {[
-              { icon: Youtube, label: "YouTube", color: "text-red-500", bg: "bg-red-500/20" },
-              { icon: Instagram, label: "Instagram", color: "text-pink-500", bg: "bg-pink-500/20" },
-              { icon: Music, label: "Spotify", color: "text-green-500", bg: "bg-green-500/20" }
-            ].map((social, index) => (
+          <h3 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            marginBottom: '2rem',
+            color: '#00ffff',
+            fontFamily: "'Dystopian', 'Montserrat', sans-serif"
+          }}>Redes Sociais</h3>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1.5rem',
+            flexWrap: 'wrap'
+          }}>
+            <a href="https://www.youtube.com/channel/UCnvOrXyqGdK2AFrYcAQAwyg" target="_blank" rel="noopener noreferrer">
               <motion.button
-                key={index}
-                className={`${social.bg} ${social.color} p-6 rounded-2xl border border-gray-700/50 hover:border-gray-500/50 transition-all duration-300`}
-                whileHover={{ 
+                style={{
+                  background: 'rgba(255, 0, 0, 0.1)',
+                  color: '#ff0000',
+                  padding: '1.2rem',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(255, 0, 0, 0.3)',
+                  transition: 'all 0.3s ease',
+                  backdropFilter: 'blur(10px)',
+                  cursor: 'pointer'
+                }}
+                whileHover={{
                   scale: 1.1,
-                  boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)"
+                  boxShadow: '0 10px 25px rgba(255, 0, 0, 0.4)',
+                  borderColor: 'rgba(255, 0, 0, 0.8)'
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <social.icon className="w-8 h-8 mb-2" />
-                <div className="text-sm font-medium">{social.label}</div>
+                <Youtube style={{ width: '1.8rem', height: '1.8rem', marginBottom: '0.5rem' }} />
+                <div style={{ fontSize: '0.85rem', fontWeight: '600' }}>YouTube</div>
               </motion.button>
-            ))}
+            </a>
+            <a href="https://www.instagram.com/djlucashenrique_/" target="_blank" rel="noopener noreferrer">
+              <motion.button
+                style={{
+                  background: 'rgba(228, 64, 95, 0.1)',
+                  color: '#e4405f',
+                  padding: '1.2rem',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(228, 64, 95, 0.3)',
+                  transition: 'all 0.3s ease',
+                  backdropFilter: 'blur(10px)',
+                  cursor: 'pointer'
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: '0 10px 25px rgba(228, 64, 95, 0.4)',
+                  borderColor: 'rgba(228, 64, 95, 0.8)'
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Instagram style={{ width: '1.8rem', height: '1.8rem', marginBottom: '0.5rem' }} />
+                <div style={{ fontSize: '0.85rem', fontWeight: '600' }}>Instagram</div>
+              </motion.button>
+            </a>
+            <a href="https://open.spotify.com/intl-pt/artist/0auLP5j5MbnqMRXmdlvub9" target="_blank" rel="noopener noreferrer">
+              <motion.button
+                style={{
+                  background: 'rgba(29, 185, 84, 0.1)',
+                  color: '#1db954',
+                  padding: '1.2rem',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(29, 185, 84, 0.3)',
+                  transition: 'all 0.3s ease',
+                  backdropFilter: 'blur(10px)',
+                  cursor: 'pointer'
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: '0 10px 25px rgba(29, 185, 84, 0.4)',
+                  borderColor: 'rgba(29, 185, 84, 0.8)'
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Music style={{ width: '1.8rem', height: '1.8rem', marginBottom: '0.5rem' }} />
+                <div style={{ fontSize: '0.85rem', fontWeight: '600' }}>Spotify</div>
+              </motion.button>
+            </a>
           </div>
         </motion.div>
 
-        {/* CTA Button */}
+        {/* CTA Button - Gruv Label Style */}
         <motion.div 
-          className="text-center"
+          style={{
+            textAlign: 'center'
+          }}
           variants={itemVariants}
         >
-          <motion.button
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-12 py-4 rounded-full text-xl font-bold shadow-2xl"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            🎤 CONTRATAR LUCAS HENRIQUE
-          </motion.button>
+          <a href="https://api.whatsapp.com/send?phone=5547997400088&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Lucas%20Henrique." target="_blank" rel="noopener noreferrer">
+            <motion.button
+              style={{
+                background: 'linear-gradient(135deg, #00ffff, #00cccc)',
+                color: '#000',
+                padding: '1rem 2.5rem',
+                borderRadius: '50px',
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 10px 30px rgba(0, 255, 255, 0.3)',
+                transition: 'all 0.3s ease',
+                fontFamily: "'Dystopian', 'Montserrat', sans-serif",
+                textTransform: 'uppercase',
+                letterSpacing: '1px'
+              }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: '0 15px 40px rgba(0, 255, 255, 0.5)',
+                background: 'linear-gradient(135deg, #00cccc, #00ffff)'
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              🎤 CONTRATAR LUCAS HENRIQUE
+            </motion.button>
+          </a>
         </motion.div>
       </motion.div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.8; }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+      `}</style>
     </div>
   );
 };
