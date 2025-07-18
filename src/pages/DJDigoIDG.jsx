@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Instagram, Youtube, Music, MessageCircle } from 'lucide-react';
-import digoIDGImage from '../assets/djdigoidg-Ds1C91GO.webp';
+import digoIDGImage from '../assets/djdigoidg.webp';
 
 const DigoIDG = () => {
   const [isLoaded, setIsLoaded] = useState(false);

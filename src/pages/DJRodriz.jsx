@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Instagram, Youtube, Music, MessageCircle } from 'lucide-react';
-import djRodrizImage from '../assets/djrodriz-DCTaJZVk.webp';
+import djRodrizImage from '../assets/djrodriz.webp';
 
 const DJRodriz = () => {
   const [isLoaded, setIsLoaded] = useState(false);
