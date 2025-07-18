@@ -30,6 +30,9 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         external: []
       }
+    },
+    esbuild: {
+      target: 'es2015'
     }
   }
 })
