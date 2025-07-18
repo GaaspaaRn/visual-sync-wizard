@@ -105,14 +105,15 @@ const DJLucasHenrique = () => {
         style={{
           position: 'fixed',
           bottom: '2rem',
-          right: '2rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
           zIndex: 1000
         }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 300 }}
       >
-        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Lucas%20Henrique." target="_blank" rel="noopener noreferrer">
+        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Lucas%20Henrique." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <motion.button
             style={{
               background: 'linear-gradient(135deg, #00ffff, #00cccc)',
@@ -431,7 +432,7 @@ const DJLucasHenrique = () => {
                 style={{borderRadius: '12px'}} 
                 src="https://open.spotify.com/embed/track/0cm0T95hVIgR9IKmz76prJ?utm_source=generator" 
                 width="100%" 
-                height="352" 
+                height="200" 
                 frameBorder="0" 
                 allowFullScreen="" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -482,7 +483,7 @@ const DJLucasHenrique = () => {
             }}>
               <iframe
                 width="100%"
-                height="100%"
+                height="200"
                 src="https://www.youtube.com/embed/MIWyA_0k4L0"
                 title="DJ Lucas Henrique - YouTube"
                 frameBorder="0"

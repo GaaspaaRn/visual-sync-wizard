@@ -105,14 +105,15 @@ const DJZatelli = () => {
         style={{
           position: 'fixed',
           bottom: '2rem',
-          right: '2rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
           zIndex: 1000
         }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 300 }}
       >
-        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Zatelli." target="_blank" rel="noopener noreferrer">
+        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Zatelli." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <motion.button
             style={{
               background: 'linear-gradient(135deg, #00ffff, #00cccc)',
@@ -431,7 +432,7 @@ const DJZatelli = () => {
                 style={{borderRadius: '12px'}} 
                 src="https://open.spotify.com/embed/track/6BlnhPe8oMmJndqOneit2U?utm_source=generator" 
                 width="100%" 
-                height="352" 
+                height="200" 
                 frameBorder="0" 
                 allowFullScreen="" 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
@@ -482,7 +483,7 @@ const DJZatelli = () => {
             }}>
               <iframe
                 width="100%"
-                height="100%"
+                height="200"
                 src="https://www.youtube.com/embed/wkBYS1pkY8s"
                 title="DJ Zatelli - YouTube"
                 frameBorder="0"
