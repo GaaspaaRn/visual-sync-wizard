@@ -86,10 +86,20 @@ const ArtistModal = ({ selectedDJ, modalPosition, onClose }) => {
             transition={{ delay: 0.3 }}
           >
             <h3>Música Mais Ouvida</h3>
-            <div 
-              className="spotify-player" 
-              dangerouslySetInnerHTML={{ __html: selectedDJ.spotifyEmbed }}
-            />
+            <div className="spotify-player">
+              <iframe
+                data-testid="embed-iframe"
+                style={{borderRadius: '12px'}}
+                src={selectedDJ.spotifyEmbed}
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowFullScreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title={`${selectedDJ.name} - Spotify Track`}
+              />
+            </div>
           </motion.div>
           
           <motion.div 
