@@ -17,7 +17,7 @@ export const djs = [
     topTrack: 'MEGA FUNK SUSTENTA',
     stats: {
       youtubeSubscribers: '1.79K',
-      youtubeViews: '1,882,169',
+      youtubeViews: '1,89M',
       youtubeVideos: '66',
       spotifyMonthly: '83.8K'
     },
@@ -36,7 +36,7 @@ export const djs = [
     topTrack: 'MEGA PROMISCUOUS',
     stats: {
       youtubeSubscribers: '8.8K',
-      youtubeViews: '3,001,231',
+      youtubeViews: '3M',
       youtubeVideos: '62',
       spotifyMonthly: '26.2K'
     },
@@ -55,7 +55,7 @@ export const djs = [
     topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
     stats: {
       youtubeSubscribers: '6.31K',
-      youtubeViews: '1,848,406',
+      youtubeViews: '1,84M',
       youtubeVideos: '57',
       spotifyMonthly: '3.9K'
     },

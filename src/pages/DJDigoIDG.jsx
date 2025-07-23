@@ -178,9 +178,8 @@ const DigoIDG = () => {
               height: '150px',
               margin: '0 auto',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
-              padding: '4px',
-              boxShadow: '0 0 30px rgba(0, 255, 255, 0.5)'
+              background: '#333',
+              padding: '2px'
             }}>
               <div style={{
                 width: '100%',
@@ -196,27 +195,15 @@ const DigoIDG = () => {
                   src={digoIDGImage} 
                   alt="Digo IDG"
                   style={{
-                    width: '100%',
-                    height: '100%',
+                    width: '120%',
+                    height: '120%',
                     objectFit: 'cover',
+                    objectPosition: 'center top',
                     borderRadius: '50%'
                   }}
                 />
               </div>
             </div>
-            <motion.div
-              style={{
-                position: 'absolute',
-                inset: '-8px',
-                background: 'linear-gradient(135deg, #00ffff, #00cccc)',
-                borderRadius: '50%',
-                filter: 'blur(15px)',
-                opacity: 0.4,
-                zIndex: -1
-              }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            />
           </motion.div>
           
           <motion.h1 

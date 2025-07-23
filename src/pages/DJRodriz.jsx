@@ -178,8 +178,8 @@ const DJRodriz = () => {
               height: '150px',
               margin: '0 auto',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
-              padding: '4px'
+              background: '#333',
+              padding: '2px'
             }}>
               <div style={{
                 width: '100%',
@@ -195,8 +195,8 @@ const DJRodriz = () => {
                   src={djRodrizImage} 
                   alt="DJ Rodriz"
                   style={{
-                    width: '100%',
-                    height: '100%',
+                    width: '120%',
+                    height: '120%',
                     objectFit: 'cover',
                     objectPosition: 'center top',
                     borderRadius: '50%'
@@ -331,7 +331,7 @@ const DJRodriz = () => {
         >
           {[
             { label: "Inscritos", value: "1.79K", icon: Youtube, color: "#ff0000" },
-            { label: "Visualizações", value: "1,892,169", icon: Play, color: "#00ffff" },
+            { label: "Visualizações", value: "1,89M", icon: Play, color: "#00ffff" },
             { label: "Ouvintes/mês", value: "83.8K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div

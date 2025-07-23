@@ -178,8 +178,8 @@ const DJZatelli = () => {
               height: '150px',
               margin: '0 auto',
               borderRadius: '50%',
-              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
-              padding: '4px'
+              background: '#333',
+              padding: '2px'
             }}>
               <div style={{
                 width: '100%',
@@ -195,9 +195,10 @@ const DJZatelli = () => {
                   src={djZatelliImage} 
                   alt="DJ Zatelli"
                   style={{
-                    width: '100%',
-                    height: '100%',
+                    width: '120%',
+                    height: '120%',
                     objectFit: 'cover',
+                    objectPosition: 'center top',
                     borderRadius: '50%'
                   }}
                 />
@@ -330,7 +331,7 @@ const DJZatelli = () => {
         >
           {[
             { label: "Inscritos", value: "6.31K", icon: Youtube, color: "#ff0000" },
-            { label: "Visualizações", value: "1,848,406", icon: Play, color: "#00ffff" },
+            { label: "Visualizações", value: "1,84M", icon: Play, color: "#00ffff" },
             { label: "Ouvintes/mês", value: "3.9K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
