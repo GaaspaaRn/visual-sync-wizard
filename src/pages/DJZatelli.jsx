@@ -195,10 +195,10 @@ const DJZatelli = () => {
                   src={djZatelliImage} 
                   alt="DJ Zatelli"
                   style={{
-                    width: '150%',
-                    height: '150%',
+                    width: '120%',
+                    height: '120%',
                     objectFit: 'cover',
-                    objectPosition: 'center 10%',
+                    objectPosition: 'center 35%',
                     borderRadius: '50%'
                   }}
                 />

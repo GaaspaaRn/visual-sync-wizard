@@ -195,10 +195,10 @@ const Diguera = () => {
                   src={digueraImage} 
                   alt="DJ Diguera"
                   style={{
-                    width: '150%',
-                    height: '150%',
+                    width: '120%',
+                    height: '120%',
                     objectFit: 'cover',
-                    objectPosition: 'center 15%',
+                    objectPosition: 'center 40%',
                     borderRadius: '50%'
                   }}
                 />
