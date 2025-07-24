@@ -4,7 +4,7 @@ import App from './App';
 import DJRodriz from './pages/DJRodriz';
 import DJLucasHenrique from './pages/DJLucasHenrique';
 import DJZatelli from './pages/DJZatelli';
-import DJDigoIDG from './pages/DJDigoIDG';
+import DJDiguera from './pages/DJDiguera';
 
 function AppRouter() {
   return (
@@ -14,7 +14,7 @@ function AppRouter() {
         <Route path="/rodriz" element={<DJRodriz />} />
         <Route path="/lucashenrique" element={<DJLucasHenrique />} />
         <Route path="/zatelli" element={<DJZatelli />} />
-        <Route path="/digoidg" element={<DJDigoIDG />} />
+        <Route path="/diguera" element={<DJDiguera />} />
       </Routes>
     </Router>
   );

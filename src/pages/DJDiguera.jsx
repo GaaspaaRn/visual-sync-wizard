@@ -193,12 +193,12 @@ const DigoIDG = () => {
               }}>
                 <img 
                   src={digoIDGImage} 
-                  alt="Digo IDG"
+                  alt="Diguera"
                   style={{
-                    width: '120%',
-                    height: '120%',
+                    width: '140%',
+                    height: '140%',
                     objectFit: 'cover',
-                    objectPosition: 'center top',
+                    objectPosition: 'center 30%',
                     borderRadius: '50%'
                   }}
                 />
