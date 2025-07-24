@@ -178,8 +178,8 @@ const Diguera = () => {
               height: '150px',
               margin: '0 auto',
               borderRadius: '50%',
-              background: '#333',
-              padding: '2px'
+              background: '#000',
+              padding: '0px'
             }}>
               <div style={{
                 width: '100%',
@@ -195,10 +195,10 @@ const Diguera = () => {
                   src={digueraImage} 
                   alt="DJ Diguera"
                   style={{
-                    width: '140%',
-                    height: '140%',
+                    width: '150%',
+                    height: '150%',
                     objectFit: 'cover',
-                    objectPosition: 'center 30%',
+                    objectPosition: 'center 15%',
                     borderRadius: '50%'
                   }}
                 />
