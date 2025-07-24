@@ -64,8 +64,8 @@ export const djs = [
   },
   {
     id: 'diguera',
-    name: 'Diguera',
-    artistName: 'Diguera',
+    name: 'DJ Diguera',
+    artistName: 'DJ Diguera',
     image: djDigoIdgImg,
     youtube: 'https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ',
     instagram: 'https://www.instagram.com/digoidg/',
@@ -78,7 +78,7 @@ export const djs = [
       youtubeVideos: '47',
       spotifyMonthly: '0.2K'
     },
-    bio: 'Rodrigo (23 anos), natural de Joinville, Santa Catarina. Diguera começou sua carreira no Mega Funk no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. Diguera é um artista versátil que segue crescendo na cena do Mega Funk, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.',
+    bio: 'Rodrigo (23 anos), natural de Joinville, Santa Catarina. DJ Diguera começou sua carreira no Mega Funk no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. DJ Diguera é um artista versátil que segue crescendo na cena do Mega Funk, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.',
     color: 'hsl(180, 100%, 50%)'
   }
 ];

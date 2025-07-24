@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Instagram, Youtube, Music, MessageCircle } from 'lucide-react';
-import digoIDGImage from '../assets/djdigoidg.webp';
+import digueraImage from '../assets/djdigoidg.webp';
 
-const DigoIDG = () => {
+const Diguera = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -113,7 +113,7 @@ const DigoIDG = () => {
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 300 }}
       >
-        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20Digo%20IDG." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Diguera." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <motion.button
             style={{
               background: 'linear-gradient(135deg, #00ffff, #00cccc)',
@@ -139,7 +139,7 @@ const DigoIDG = () => {
             whileTap={{ scale: 0.95 }}
           >
             <MessageCircle style={{ width: '1.2rem', height: '1.2rem' }} />
-            CONTRATAR DIGO IDG
+            CONTRATAR DJ DIGUERA
           </motion.button>
         </a>
       </motion.div>
@@ -192,8 +192,8 @@ const DigoIDG = () => {
                 overflow: 'hidden'
               }}>
                 <img 
-                  src={digoIDGImage} 
-                  alt="Diguera"
+                  src={digueraImage} 
+                  alt="DJ Diguera"
                   style={{
                     width: '140%',
                     height: '140%',
@@ -219,7 +219,7 @@ const DigoIDG = () => {
             }}
             variants={itemVariants}
           >
-            Digo IDG
+            DJ Diguera
           </motion.h1>
           
           <motion.p 
@@ -230,7 +230,7 @@ const DigoIDG = () => {
             }}
             variants={itemVariants}
           >
-            @digoidg
+            @djdiguera
           </motion.p>
         </motion.div>
 
@@ -439,7 +439,7 @@ const DigoIDG = () => {
               width="100%"
               height="150"
               src="https://www.youtube.com/embed/J4SezJtNvq8"
-              title="Digo IDG - YouTube"
+              title="DJ Diguera - YouTube"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -499,5 +499,4 @@ const DigoIDG = () => {
   );
 };
 
-export default DigoIDG;
-
+export default Diguera;
