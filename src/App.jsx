@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Youtube, Instagram, Music } from 'lucide-react';
 import './App.css';
 
@@ -14,6 +15,7 @@ import { djs, getTotalStats } from './data/djs';
 import { openWhatsApp } from './utils/whatsapp';
 
 function App() {
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -414,6 +416,15 @@ function App() {
                       <motion.button 
                         className="btn btn-artist btn-profile" 
                         style={{ background: dj.color }}
+                        onClick={() => {
+                          const routes = {
+                            'rodriz': '/rodriz',
+                            'lucas': '/lucashenrique', 
+                            'zatelli': '/zatelli',
+                            'diguera': '/diguera'
+                          };
+                          navigate(routes[dj.id]);
+                        }}
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
                       >
