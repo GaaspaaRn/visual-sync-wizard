@@ -416,6 +416,10 @@ function App() {
                         style={{ background: dj.color }}
                         whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95 }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(`https://gruvlabel.com/${dj.id}`, '_blank');
+                        }}
                       >
                         VER PERFIL
                       </motion.button>
