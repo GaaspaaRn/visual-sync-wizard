@@ -332,7 +332,7 @@ const DJZatelli = () => {
           {[
             { label: "Inscritos", value: "6.31K", icon: Youtube, color: "#ff0000" },
             { label: "Visualizações", value: "1,84M", icon: Play, color: "#00ffff" },
-            { label: "Ouvintes/mês", value: "3.9K", icon: Music, color: "#1db954" }
+            { label: "Ouvintes/mês", value: "5K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
               key={index}

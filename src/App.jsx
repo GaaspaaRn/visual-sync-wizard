@@ -286,7 +286,7 @@ function App() {
                 { number: `${Math.round(totalStats.subscribers / 1000)}K+`, label: 'Inscritos' },
                 { number: '7M+', label: 'Visualizações' },
                 { number: `${totalStats.videos}+`, label: 'Vídeos' },
-                { number: `${Math.round(totalStats.monthly / 1000)}K+`, label: 'Ouvintes/mês' }
+                { number: '135K+', label: 'Ouvintes/mês' }
               ].map((stat, index) => (
                 <motion.div 
                   key={index}

@@ -332,7 +332,7 @@ const DJRodriz = () => {
           {[
             { label: "Inscritos", value: "1.79K", icon: Youtube, color: "#ff0000" },
             { label: "Visualizações", value: "1,89M", icon: Play, color: "#00ffff" },
-            { label: "Ouvintes/mês", value: "83.8K", icon: Music, color: "#1db954" }
+            { label: "Ouvintes/mês", value: "102K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
               key={index}
