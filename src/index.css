@@ -99,10 +99,43 @@ a {
 /* Critical CSS for above-the-fold content */
 .hero {
   contain: layout style paint;
+  content-visibility: auto;
 }
 
 .header {
   contain: layout style;
+  content-visibility: auto;
+}
+
+/* Performance optimizations */
+.artists-grid {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
+.about {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* Loading screen optimization */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: hsl(var(--background));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  contain: strict;
+}
+
+.loading-logo-image {
+  width: 120px;
+  height: auto;
 }
 
 /* Optimize for mobile performance */
@@ -114,6 +147,10 @@ a {
   
   .custom-cursor {
     display: none;
+  }
+  
+  .hero-video-element {
+    transform: none !important;
   }
 }
 

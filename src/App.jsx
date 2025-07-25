@@ -5,7 +5,7 @@ import './App.css';
 
 // Import components
 import CustomCursor from './components/CustomCursor';
-import LazyImage from './components/LazyImage';
+import OptimizedImage from './components/OptimizedImage';
 import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
 import ArtistModal from './components/ArtistModal';
@@ -36,8 +36,8 @@ function App() {
     
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    // Simulate loading time
-    const timer = setTimeout(() => setIsLoading(false), 1000);
+    // Optimize loading time
+    const timer = setTimeout(() => setIsLoading(false), 300);
     
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -86,10 +86,13 @@ function App() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <img 
+            <OptimizedImage 
               src="/logo-gruvlabel.png" 
               alt="Gruv Label Logo" 
               className="logo-image"
+              priority={true}
+              width="120"
+              height="40"
             />
           </motion.div>
           
@@ -216,7 +219,7 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="hero">
-        {/* Video Background */}
+      {/* Video Background */}
         <div className="hero-video">
           <video 
             autoPlay 
@@ -225,6 +228,8 @@ function App() {
             playsInline
             className="hero-video-element"
             poster=""
+            preload="metadata"
+            loading="lazy"
           >
             <source src="./videos/gruvlabel-djzatelli.mp4" type="video/mp4" />
             Seu navegador não suporta o elemento de vídeo.
@@ -364,10 +369,12 @@ function App() {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <LazyImage 
+                    <OptimizedImage 
                       src={dj.image} 
                       alt={dj.name} 
-                      className="artist-photo" 
+                      className="artist-photo"
+                      width="300"
+                      height="300"
                     />
                   </motion.div>
                   
