@@ -8,15 +8,12 @@ import CustomCursor from './components/CustomCursor';
 import OptimizedImage from './components/OptimizedImage';
 import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
-import ArtistModal from './components/ArtistModal';
 
 // Import data and utils
 import { djs, getTotalStats } from './data/djs';
 import { openWhatsApp } from './utils/whatsapp';
 
 function App() {
-  const [selectedDJ, setSelectedDJ] = useState(null);
-  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -348,15 +345,6 @@ function App() {
               <RevealOnScroll key={dj.id} delay={index * 0.1}>
                 <motion.div 
                   className="artist-card"
-                  onClick={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    setModalPosition({
-                      top: rect.top + scrollTop - 50,
-                      left: rect.left
-                    });
-                    setSelectedDJ(dj);
-                  }}
                   style={{ '--accent-color': dj.color }}
                   whileHover={{ 
                     y: -10,
@@ -574,16 +562,6 @@ function App() {
         </div>
       </footer>
 
-      {/* Artist Modal */}
-      <AnimatePresence>
-        {selectedDJ && (
-          <ArtistModal 
-            selectedDJ={selectedDJ} 
-            modalPosition={modalPosition}
-            onClose={() => setSelectedDJ(null)} 
-          />
-        )}
-      </AnimatePresence>
     </div>
   );
 }
