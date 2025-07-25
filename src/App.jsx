@@ -284,7 +284,7 @@ function App() {
             >
               {[
                 { number: `${Math.round(totalStats.subscribers / 1000)}K+`, label: 'Inscritos' },
-                { number: `${Math.round(totalStats.views / 1000000)}M+`, label: 'Visualizações' },
+                { number: '7M+', label: 'Visualizações' },
                 { number: `${totalStats.videos}+`, label: 'Vídeos' },
                 { number: `${Math.round(totalStats.monthly / 1000)}K+`, label: 'Ouvintes/mês' }
               ].map((stat, index) => (

@@ -17,9 +17,9 @@ export const djs = [
     topTrack: 'MEGA FUNK SUSTENTA',
     stats: {
       youtubeSubscribers: '1.79K',
-      youtubeViews: '1,89M',
+      youtubeViews: '2M+',
       youtubeVideos: '66',
-      spotifyMonthly: '83.8K'
+      spotifyMonthly: '102.788'
     },
     bio: 'Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário, com colaborações ao lado de nomes de peso da cena.',
     color: 'hsl(180, 100%, 50%)'
@@ -36,9 +36,9 @@ export const djs = [
     topTrack: 'MEGA PROMISCUOUS',
     stats: {
       youtubeSubscribers: '8.8K',
-      youtubeViews: '3M',
+      youtubeViews: '3M+',
       youtubeVideos: '62',
-      spotifyMonthly: '26.2K'
+      spotifyMonthly: '28.18K'
     },
     bio: 'Lucas Henrique iniciou sua carreira no Mega Funk em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.',
     color: 'hsl(180, 100%, 50%)'
@@ -55,9 +55,9 @@ export const djs = [
     topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
     stats: {
       youtubeSubscribers: '6.31K',
-      youtubeViews: '1,84M',
+      youtubeViews: '1,91M+',
       youtubeVideos: '57',
-      spotifyMonthly: '3.9K'
+      spotifyMonthly: '4440'
     },
     bio: 'Thiago Correira, mais conhecido como DJ Zatelli, Nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e produtor de Mega Funk desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena do mega funk por estar sempre inovando a cada novo som. Se apresentando em várias cidades do Sul do País, Zatelli vem conquistando cada vez mais reconhecimento e fama.',
     color: 'hsl(180, 100%, 50%)'
