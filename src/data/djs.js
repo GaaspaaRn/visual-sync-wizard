@@ -25,7 +25,7 @@ export const djs = [
     color: 'hsl(180, 100%, 50%)'
   },
   {
-    id: 'lucas',
+    id: 'lucashenrique',
     name: 'DJ Lucas Henrique',
     artistName: 'Lucas Henrique',
     image: djLucasHenriqueImg,
