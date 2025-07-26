@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Instagram, Youtube, Music, MessageCircle } from 'lucide-react';
 import djRodrizImage from '../assets/djrodriz.webp';
+import SEOHead from '../components/SEOHead';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
+import DJPageCSS from '../components/DJPageCSS';
+import { LazySpotifyEmbed, LazyYouTubeEmbed, LazyInstagramEmbed } from '../components/PerformanceOptimizer';
 
 const DJRodriz = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -56,7 +60,24 @@ const DJRodriz = () => {
   };
 
   return (
-    <div style={{
+    <PerformanceOptimizer>
+      <SEOHead 
+        title="DJ Rodriz | Gruv Label - Electronic Music Producer"
+        description="DJ Rodriz - Producer de música eletrônica com 1.79K inscritos no YouTube e 102K ouvintes mensais no Spotify. Contrate DJ Rodriz para seu evento."
+        image="/assets/djrodriz.webp"
+        url="/rodriz"
+        artist={{
+          name: "DJ Rodriz",
+          description: "Producer de música eletrônica especializado em electronic music"
+        }}
+        socialLinks={{
+          spotify: "https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP",
+          youtube: "https://www.youtube.com/@djrodriz1",
+          instagram: "https://www.instagram.com/rodriz.wav/"
+        }}
+      />
+      <DJPageCSS />
+      <div className="dj-page-container" style={{
       minHeight: '100vh',
       background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)',
       color: 'white',
@@ -398,17 +419,9 @@ const DJRodriz = () => {
             borderRadius: '12px',
             overflow: 'hidden'
           }}>
-            <iframe 
-              data-testid="embed-iframe" 
-              style={{borderRadius: '12px'}} 
-              src="https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator" 
-              width="100%" 
-              height="152" 
-              frameBorder="0" 
-              allowFullScreen="" 
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-              loading="lazy"
-            ></iframe>
+            <Suspense fallback={<div className="lazy-placeholder" style={{height: '152px', borderRadius: '12px'}}></div>}>
+              <LazySpotifyEmbed trackId="1T0Za0ldouSRjRMH94SwWI" title="DJ Rodriz - Spotify Player" />
+            </Suspense>
           </div>
         </motion.div>
 
@@ -435,16 +448,9 @@ const DJRodriz = () => {
             borderRadius: '12px',
             overflow: 'hidden'
           }}>
-            <iframe
-              width="100%"
-              height="150"
-              src="https://www.youtube.com/embed/VRfHI0rjPuQ"
-              title="DJ Rodriz - YouTube"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ borderRadius: '12px' }}
-            ></iframe>
+            <Suspense fallback={<div className="lazy-placeholder" style={{height: '150px', borderRadius: '12px'}}></div>}>
+              <LazyYouTubeEmbed videoId="VRfHI0rjPuQ" title="DJ Rodriz - YouTube" />
+            </Suspense>
           </div>
         </motion.div>
 
@@ -516,9 +522,9 @@ const DJRodriz = () => {
           50% { transform: translateY(-20px) rotate(180deg); }
         }
       `}</style>
-    </div>
+      </div>
+    </PerformanceOptimizer>
   );
-};
 
 export default DJRodriz;
 
