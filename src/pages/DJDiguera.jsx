@@ -497,4 +497,4 @@ const Diguera = () => {
   );
 };
 
-export default DJDiguera;
+export default Diguera;
