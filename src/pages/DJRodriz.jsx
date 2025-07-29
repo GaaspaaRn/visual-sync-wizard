@@ -525,6 +525,6 @@ const DJRodriz = () => {
       </div>
     </PerformanceOptimizer>
   );
-
+};
 export default DJRodriz;
 
