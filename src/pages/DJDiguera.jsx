@@ -492,10 +492,8 @@ const Diguera = () => {
         </motion.div>
       </motion.div>
 
-      </div>
+   </div>
     </PerformanceOptimizer>
-      `}</style>
-    </div>
   );
 };
 
