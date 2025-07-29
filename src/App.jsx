@@ -457,8 +457,7 @@ function App() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  A <strong>Gruv Label</strong> é uma agência especializada em bookings e agenciamento de artistas, 
-                  com foco inicial nos talentosos DJs de megafunk da cidade de Joinville (SC).
+                  A <strong>Gruv Label</strong> é uma agência especializada em bookings e agenciamento de artistas.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
