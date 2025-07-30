@@ -1,10 +1,11 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Instagram, Youtube, Music, MessageCircle } from 'lucide-react';
+import { Play, Instagram, Youtube, Music } from 'lucide-react';
 import djRodrizImage from '../assets/djrodriz.webp';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import DJPageCSS from '../components/DJPageCSS';
+import FloatingContractButton from '../components/FloatingContractButton';
 import { LazySpotifyEmbed, LazyYouTubeEmbed, LazyInstagramEmbed } from '../components/PerformanceOptimizer';
 
 const DJRodriz = () => {
@@ -122,48 +123,10 @@ const DJRodriz = () => {
       </div>
 
       {/* Floating Contract Button */}
-      <motion.div
-        style={{
-          position: 'fixed',
-          bottom: '2rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          zIndex: 1000
-        }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1, type: "spring", stiffness: 300 }}
-      >
-        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Rodriz." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-          <motion.button
-            style={{
-              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
-              color: '#000',
-              padding: '1rem 1.5rem',
-              borderRadius: '50px',
-              fontSize: '1rem',
-              fontWeight: 'bold',
-              border: 'none',
-              cursor: 'pointer',
-              boxShadow: '0 10px 30px rgba(0, 255, 255, 0.4)',
-              transition: 'all 0.3s ease',
-              fontFamily: "'Dystopian', 'Montserrat', sans-serif",
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: '0 15px 40px rgba(0, 255, 255, 0.6)',
-              background: 'linear-gradient(135deg, #00cccc, #00ffff)'
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <MessageCircle style={{ width: '1.2rem', height: '1.2rem' }} />
-            CONTRATAR RODRIZ
-          </motion.button>
-        </a>
-      </motion.div>
+      <FloatingContractButton 
+        djName="RODRIZ"
+        whatsappMessage="Olá, gostaria de contratar o DJ Rodriz."
+      />
 
       <motion.div
         style={{

@@ -1,10 +1,11 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Instagram, Youtube, Music, MessageCircle } from 'lucide-react';
+import { Play, Instagram, Youtube, Music } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer, { LazySpotifyEmbed, LazyYouTubeEmbed, LazyInstagramEmbed } from '../components/PerformanceOptimizer';
 import OptimizedImage from '../components/OptimizedImage';
 import DJPageCSS from '../components/DJPageCSS';
+import FloatingContractButton from '../components/FloatingContractButton';
 import djZatelliImage from '../assets/djzatelli_1.webp';
 
 const DJZatelli = () => {
@@ -119,48 +120,10 @@ const DJZatelli = () => {
       </div>
 
       {/* Floating Contract Button */}
-      <motion.div
-        style={{
-          position: 'fixed',
-          bottom: '2rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          zIndex: 1000
-        }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1, type: "spring", stiffness: 300 }}
-      >
-        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Zatelli." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-          <motion.button
-            style={{
-              background: 'linear-gradient(135deg, #00ffff, #00cccc)',
-              color: '#000',
-              padding: '1rem 1.5rem',
-              borderRadius: '50px',
-              fontSize: '1rem',
-              fontWeight: 'bold',
-              border: 'none',
-              cursor: 'pointer',
-              boxShadow: '0 10px 30px rgba(0, 255, 255, 0.4)',
-              transition: 'all 0.3s ease',
-              fontFamily: "'Dystopian', 'Montserrat', sans-serif",
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}
-            whileHover={{
-                scale: 1.05,
-                boxShadow: '0 15px 40px rgba(0, 255, 255, 0.6)',
-                background: 'linear-gradient(135deg, #00cccc, #00ffff)'
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <MessageCircle style={{ width: '1.2rem', height: '1.2rem' }} />
-              CONTRATAR ZATELLI
-            </motion.button>
-          </a>
-        </motion.div>
+      <FloatingContractButton 
+        djName="ZATELLI"
+        whatsappMessage="Olá, gostaria de contratar o DJ Zatelli."
+      />
 
         <motion.div
           style={{
@@ -182,6 +145,29 @@ const DJZatelli = () => {
             }}
             variants={itemVariants}
           >
+            {/* Gruv Label Logo */}
+            <motion.div
+              style={{
+                position: 'absolute',
+                top: '1rem',
+                left: '1rem',
+                zIndex: 20
+              }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <img 
+                src="/logo-gruvlabel.png" 
+                alt="Gruv Label"
+                style={{
+                  width: '80px',
+                  height: 'auto',
+                  filter: 'brightness(1.2) contrast(1.1)'
+                }}
+              />
+            </motion.div>
+
             <motion.div
               style={{
                 position: 'relative',
