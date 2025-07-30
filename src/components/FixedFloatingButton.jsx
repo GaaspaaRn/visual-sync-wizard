@@ -5,7 +5,7 @@ import { MessageCircle } from 'lucide-react';
 // Renomeei o componente para refletir sua função específica
 const FloatingDJButton = ({ whatsappMessage }) => {
   // URL para o WhatsApp com a mensagem pré-definida
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=5547988625307&text=${encodeURIComponent(
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=5547997644727&text=${encodeURIComponent(
     whatsappMessage
   )}`;
 

@@ -113,7 +113,7 @@ const DJZatelli = () => {
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: "spring", stiffness: 300 }}
       >
-        <a href="https://api.whatsapp.com/send?phone=5547988625307&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Zatelli." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <a href="https://api.whatsapp.com/send?phone=5547997644727&text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20o%20DJ%20Zatelli." target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
           <motion.button
             style={{
               background: 'linear-gradient(135deg, #00ffff, #00cccc)',
