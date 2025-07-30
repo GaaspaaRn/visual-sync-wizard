@@ -78,6 +78,13 @@ const Diguera = () => {
         }}
       />
       <DJPageCSS />
+      
+      {/* Fixed Floating Button - Outside motion container to avoid stacking context issues */}
+      <FixedFloatingButton 
+        djName="DJ DIGUERA"
+        whatsappMessage="Olá, gostaria de contratar o DJ Diguera."
+      />
+      
       <div className="dj-page-container" style={{
       minHeight: '100vh',
       background: 'linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)',
@@ -121,12 +128,6 @@ const Diguera = () => {
           animation: 'float 10s infinite ease-in-out reverse'
         }}></div>
       </div>
-
-      {/* Fixed Floating Button */}
-      <FixedFloatingButton 
-        djName="DJ DIGUERA"
-        whatsappMessage="Olá, gostaria de contratar o DJ Diguera."
-      />
 
       <motion.div
         style={{

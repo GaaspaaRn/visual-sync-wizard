@@ -14,7 +14,7 @@ const FloatingDJButton = ({ whatsappMessage }) => {
     position: 'fixed',
     bottom: '32px', // 2rem
     right: '32px', // 2rem
-    zIndex: 1000,
+    zIndex: 9999, // Higher z-index to ensure it appears above everything
   };
 
   const buttonStyle = {
