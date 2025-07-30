@@ -2,68 +2,73 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
-const FixedFloatingButton = ({ djName, whatsappMessage }) => {
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=5547988625307&text=${encodeURIComponent(whatsappMessage)}`;
-  
+// Renomeei o componente para refletir sua função específica
+const FloatingDJButton = ({ whatsappMessage }) => {
+  // URL para o WhatsApp com a mensagem pré-definida
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=5547988625307&text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
+  // Estilos foram organizados em objetos para melhor legibilidade
+  const containerStyle = {
+    position: 'fixed',
+    bottom: '32px', // 2rem
+    right: '32px', // 2rem
+    zIndex: 1000,
+  };
+
+  const buttonStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px', // Espaço entre o ícone e o texto
+    background: 'linear-gradient(135deg, hsl(var(--primary)), #10b981)', // Gradiente vibrante
+    color: 'hsl(var(--primary-foreground))',
+    padding: '14px 24px', // Padding para acomodar o texto
+    borderRadius: '9999px', // Cria o formato de "pílula"
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 8px 25px hsla(var(--primary), 0.4)',
+    fontWeight: 'bold',
+    fontSize: '16px',
+    textDecoration: 'none', // Remove sublinhado do link
+  };
+
   return (
-    <div
-      style={{
-        position: 'fixed',
-        bottom: '2rem',
-        right: '2rem',
-        zIndex: 9999,
-        pointerEvents: 'auto'
-      }}
-    >
-      <motion.a 
-        href={whatsappUrl} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        style={{ textDecoration: 'none', display: 'block' }}
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ 
-          type: "spring", 
-          stiffness: 300, 
-          damping: 20,
-          delay: 0.8
-        }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+    <div style={containerStyle}>
+      <motion.a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: 'none' }}
+        
+        // Animação de entrada: surge de baixo e aparece
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
+        
+        // Efeitos de interação
+        whileHover={{ scale: 1.05, boxShadow: '0 12px 35px hsla(var(--primary), 0.5)' }}
+        whileTap={{ scale: 0.95 }}
       >
-        <motion.button
-          style={{
-            background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(180 100% 40%))',
-            color: 'hsl(var(--primary-foreground))',
-            width: '60px',
-            height: '60px',
-            borderRadius: '50%',
-            border: 'none',
-            cursor: 'pointer',
-            boxShadow: '0 8px 25px hsla(var(--primary), 0.4)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            transition: 'all 0.3s ease'
-          }}
-          whileHover={{
-            boxShadow: '0 12px 35px hsla(var(--primary), 0.6)',
-            background: 'linear-gradient(135deg, hsl(180 100% 40%), hsl(var(--primary)))'
-          }}
+        {/* O botão agora é um div, semanticamente melhor dentro de uma tag <a> */}
+        <motion.div
+          style={buttonStyle}
+          // Animação sutil de "pulsação" para chamar atenção
           animate={{
-            y: [0, -5, 0],
+            scale: [1, 1.02, 1],
           }}
           transition={{
-            duration: 2,
+            duration: 2.5,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         >
-          <MessageCircle style={{ width: '24px', height: '24px' }} />
-        </motion.button>
+          <MessageCircle size={22} />
+          <span>Contratar DJ</span>
+        </motion.div>
       </motion.a>
     </div>
   );
 };
 
-export default FixedFloatingButton;
+export default FloatingDJButton;
