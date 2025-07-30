@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
-const FloatingContractButton = ({ djName, whatsappMessage }) => {
+const FixedFloatingButton = ({ djName, whatsappMessage }) => {
   const whatsappUrl = `https://api.whatsapp.com/send?phone=5547988625307&text=${encodeURIComponent(whatsappMessage)}`;
   
   return (
@@ -10,13 +10,19 @@ const FloatingContractButton = ({ djName, whatsappMessage }) => {
       style={{
         position: 'fixed',
         bottom: '2rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        zIndex: 1000
+        right: '2rem',
+        zIndex: 9999
       }}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ delay: 1, type: "spring", stiffness: 300 }}
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 20,
+        delay: 0.5
+      }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
     >
       <a 
         href={whatsappUrl} 
@@ -28,32 +34,35 @@ const FloatingContractButton = ({ djName, whatsappMessage }) => {
           style={{
             background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(180 100% 40%))',
             color: 'hsl(var(--primary-foreground))',
-            padding: '1rem 1.5rem',
-            borderRadius: '50px',
-            fontSize: '1rem',
-            fontWeight: 'bold',
+            width: '60px',
+            height: '60px',
+            borderRadius: '50%',
             border: 'none',
             cursor: 'pointer',
-            boxShadow: '0 10px 30px hsla(var(--primary), 0.4)',
-            transition: 'all 0.3s ease',
-            fontFamily: "'Dystopian', 'Montserrat', sans-serif",
+            boxShadow: '0 8px 25px hsla(var(--primary), 0.4)',
             display: 'flex',
             alignItems: 'center',
-            gap: '0.5rem'
+            justifyContent: 'center',
+            transition: 'all 0.3s ease'
           }}
           whileHover={{
-            scale: 1.05,
-            boxShadow: '0 15px 40px hsla(var(--primary), 0.6)',
+            boxShadow: '0 12px 35px hsla(var(--primary), 0.6)',
             background: 'linear-gradient(135deg, hsl(180 100% 40%), hsl(var(--primary)))'
           }}
-          whileTap={{ scale: 0.95 }}
+          animate={{
+            y: [0, -5, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         >
-          <MessageCircle style={{ width: '1.2rem', height: '1.2rem' }} />
-          CONTRATAR {djName}
+          <MessageCircle style={{ width: '24px', height: '24px' }} />
         </motion.button>
       </a>
     </motion.div>
   );
 };
 
-export default FloatingContractButton;
+export default FixedFloatingButton;

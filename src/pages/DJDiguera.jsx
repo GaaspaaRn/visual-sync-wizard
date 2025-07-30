@@ -5,7 +5,7 @@ import digueraImage from '../assets/djdigoidg.webp';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import DJPageCSS from '../components/DJPageCSS';
-import FloatingContractButton from '../components/FloatingContractButton';
+import FixedFloatingButton from '../components/FixedFloatingButton';
 import { LazySpotifyEmbed, LazyYouTubeEmbed, LazyInstagramEmbed } from '../components/PerformanceOptimizer';
 
 const Diguera = () => {
@@ -122,8 +122,8 @@ const Diguera = () => {
         }}></div>
       </div>
 
-      {/* Floating Contract Button */}
-      <FloatingContractButton 
+      {/* Fixed Floating Button */}
+      <FixedFloatingButton 
         djName="DJ DIGUERA"
         whatsappMessage="Olá, gostaria de contratar o DJ Diguera."
       />
@@ -148,29 +148,6 @@ const Diguera = () => {
           }}
           variants={itemVariants}
           >
-            {/* Gruv Label Logo */}
-            <motion.div
-              style={{
-                position: 'absolute',
-                top: '1rem',
-                left: '1rem',
-                zIndex: 20
-              }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              <img 
-                src="/logo-gruvlabel.png" 
-                alt="Gruv Label"
-                style={{
-                  width: '80px',
-                  height: 'auto',
-                  filter: 'brightness(1.2) contrast(1.1)'
-                }}
-              />
-            </motion.div>
-
             <motion.div
               style={{
                 position: 'relative',
@@ -476,9 +453,42 @@ const Diguera = () => {
             </Suspense>
           </div>
         </motion.div>
+
+        {/* Gruvlabel Logo */}
+        <motion.div 
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '2rem',
+            marginBottom: '2rem'
+          }}
+          variants={itemVariants}
+        >
+          <img 
+            src="/logo-gruvlabel.png" 
+            alt="Gruvlabel" 
+            style={{
+              maxWidth: '150px',
+              height: 'auto',
+              opacity: 0.8
+            }}
+          />
+        </motion.div>
       </motion.div>
 
-   </div>
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.8; }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+      `}</style>
+      </div>
     </PerformanceOptimizer>
   );
 };

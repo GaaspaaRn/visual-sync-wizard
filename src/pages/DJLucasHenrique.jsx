@@ -5,7 +5,7 @@ import djLucasHenriqueImage from '../assets/djlucashenrique.webp';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import DJPageCSS from '../components/DJPageCSS';
-import FloatingContractButton from '../components/FloatingContractButton';
+import FixedFloatingButton from '../components/FixedFloatingButton';
 import { LazySpotifyEmbed, LazyYouTubeEmbed, LazyInstagramEmbed } from '../components/PerformanceOptimizer';
 
 const DJLucasHenrique = () => {
@@ -122,8 +122,8 @@ const DJLucasHenrique = () => {
         }}></div>
       </div>
 
-      {/* Floating Contract Button */}
-      <FloatingContractButton 
+      {/* Fixed Floating Button */}
+      <FixedFloatingButton 
         djName="LUCAS"
         whatsappMessage="Olá, gostaria de contratar o DJ Lucas Henrique."
       />
@@ -476,10 +476,21 @@ const DJLucasHenrique = () => {
         </motion.div>
       </motion.div>
 
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 0.8; }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(180deg); }
+        }
+      `}</style>
       </div>
     </PerformanceOptimizer>
   );
 };
 
 export default DJLucasHenrique;
-

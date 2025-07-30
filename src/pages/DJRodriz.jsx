@@ -5,7 +5,7 @@ import djRodrizImage from '../assets/djrodriz.webp';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import DJPageCSS from '../components/DJPageCSS';
-import FloatingContractButton from '../components/FloatingContractButton';
+import FixedFloatingButton from '../components/FixedFloatingButton';
 import { LazySpotifyEmbed, LazyYouTubeEmbed, LazyInstagramEmbed } from '../components/PerformanceOptimizer';
 
 const DJRodriz = () => {
@@ -122,8 +122,8 @@ const DJRodriz = () => {
         }}></div>
       </div>
 
-      {/* Floating Contract Button */}
-      <FloatingContractButton 
+      {/* Fixed Floating Button */}
+      <FixedFloatingButton 
         djName="RODRIZ"
         whatsappMessage="Olá, gostaria de contratar o DJ Rodriz."
       />
