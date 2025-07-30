@@ -1,0 +1,26 @@
+{
+  "name": "Gruv Label - Contratar DJ em São Paulo",
+  "short_name": "Gruv Label",
+  "description": "Contrate os melhores DJs de São Paulo para seus eventos. DJ Zatelli, DJ Lucas Henrique, DJ Rodriz e DJ Diguera disponíveis.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8B5CF6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["music", "entertainment", "business"],
+  "lang": "pt-BR"
+}

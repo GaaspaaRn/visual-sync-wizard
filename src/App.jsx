@@ -8,6 +8,7 @@ import CustomCursor from './components/CustomCursor';
 import OptimizedImage from './components/OptimizedImage';
 import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
+import StructuredData from './components/StructuredData';
 
 // Import data and utils
 import { djs, getTotalStats } from './data/djs';
@@ -68,6 +69,7 @@ function App() {
 
   return (
     <div className="app">
+      <StructuredData type="website" />
       <CustomCursor />
       
       {/* Header */}
