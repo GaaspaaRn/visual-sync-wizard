@@ -4,7 +4,7 @@ Allow: /
 # Sitemap
 Sitemap: https://gruvlabel.com/sitemap.xml
 
-# Block access to admin areas (if any)
+# Block access to admin areas and source files
 Disallow: /admin/
 Disallow: /private/
 Disallow: /.env
@@ -12,6 +12,12 @@ Disallow: /config/
 Disallow: /node_modules/
 Disallow: /src/
 Disallow: /*.json
+
+# Allow specific DJ pages
+Allow: /zatelli
+Allow: /lucashenrique  
+Allow: /rodriz
+Allow: /diguera
 
 # Allow all search engines to crawl the site
 # Specific rules for major search engines

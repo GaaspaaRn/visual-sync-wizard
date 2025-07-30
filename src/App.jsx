@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Youtube, Instagram, Music, Calendar, TrendingUp, Megaphone, Video } from 'lucide-react';
 import './App.css';
@@ -9,6 +10,7 @@ import OptimizedImage from './components/OptimizedImage';
 import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
 import StructuredData from './components/StructuredData';
+import SEOCanonical from './components/SEOCanonical';
 
 // Import data and utils
 import { djs, getTotalStats } from './data/djs';
@@ -69,6 +71,7 @@ function App() {
 
   return (
     <div className="app">
+      <SEOCanonical />
       <StructuredData type="website" />
       <CustomCursor />
       
@@ -413,18 +416,16 @@ function App() {
                     </div>
                     
                     <div className="artist-buttons">
-                      <motion.button 
-                        className="btn btn-artist btn-profile" 
-                        style={{ background: dj.color }}
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          window.location.href = `/${dj.id}`;
-                        }}
-                      >
-                        VER PERFIL
-                      </motion.button>
+                      <Link to={`/${dj.id}`}>
+                        <motion.button 
+                          className="btn btn-artist btn-profile" 
+                          style={{ background: dj.color }}
+                          whileHover={{ scale: 1.05, y: -2 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          VER PERFIL
+                        </motion.button>
+                      </Link>
                       <motion.button 
                         className="btn btn-artist btn-contract" 
                         style={{ background: `linear-gradient(135deg, hsl(180, 100%, 50%, 0.5), hsl(180, 100%, 50%))` }}

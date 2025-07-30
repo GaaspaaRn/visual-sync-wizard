@@ -14,21 +14,6 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Serviços - Contratar DJ -->
-  <url>
-    <loc>https://gruvlabel.com/#services</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Artists Section -->
-  <url>
-    <loc>https://gruvlabel.com/#artists</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   
   <!-- DJ Individual Pages -->
   <url>
@@ -59,20 +44,5 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- About Section -->
-  <url>
-    <loc>https://gruvlabel.com/#about</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Contact Section -->
-  <url>
-    <loc>https://gruvlabel.com/#contact</loc>
-    <lastmod>2025-01-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
   
 </urlset>
