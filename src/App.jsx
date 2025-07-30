@@ -268,7 +268,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
               >
-                Agenciamento de Artistas <span className="sr-only">Megafunk</span>
+                Agenciamento de Artistas <span className="sr-only">Mega</span>
               </motion.span>
             </motion.h1>
             

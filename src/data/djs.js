@@ -14,7 +14,7 @@ export const djs = [
     instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
     spotifyEmbed: 'https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator&theme=0',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP',
-    topTrack: 'MEGA FUNK SUSTENTA',
+    topTrack: 'MEGA SUSTENTA',
     stats: {
       youtubeSubscribers: '1.79K',
       youtubeViews: '2M+',
@@ -40,7 +40,7 @@ export const djs = [
       youtubeVideos: '62',
       spotifyMonthly: '28K'
     },
-    bio: 'Lucas Henrique iniciou sua carreira no Mega Funk em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.',
+    bio: 'Lucas Henrique iniciou sua carreira no Mega em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -52,14 +52,14 @@ export const djs = [
     instagram: 'https://www.instagram.com/djzatelli/',
     spotifyEmbed: 'https://open.spotify.com/embed/track/6BlnhPe8oMmJndqOneit2U?utm_source=generator&theme=0',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/5WXA9QsuHzbaB696vr1Hkg',
-    topTrack: 'MEGA FUNK HOJE EU QUERO FUDER',
+    topTrack: 'MEGA HOJE EU QUERO FUDER',
     stats: {
       youtubeSubscribers: '6.31K',
       youtubeViews: '1,91M+',
       youtubeVideos: '57',
       spotifyMonthly: '5K'
     },
-    bio: 'Thiago Correira, mais conhecido como DJ Zatelli, Nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e produtor de Mega Funk desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena do mega funk por estar sempre inovando a cada novo som. Se apresentando em várias cidades do Sul do País, Zatelli vem conquistando cada vez mais reconhecimento e fama.',
+    bio: 'Thiago Correira, mais conhecido como DJ Zatelli, Nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e produtor de Mega desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena do mega por estar sempre inovando a cada novo som. Se apresentando em várias cidades do Sul do País, Zatelli vem conquistando cada vez mais reconhecimento e fama.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -78,7 +78,7 @@ export const djs = [
       youtubeVideos: '47',
       spotifyMonthly: '0.2K'
     },
-    bio: 'Rodrigo (23 anos), natural de Joinville, Santa Catarina. DJ Diguera começou sua carreira no Mega Funk no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. DJ Diguera é um artista versátil que segue crescendo na cena do Mega Funk, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.',
+    bio: 'Rodrigo (23 anos), natural de Joinville, Santa Catarina. DJ Diguera começou sua carreira no Mega no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. DJ Diguera é um artista versátil que segue crescendo na cena do Mega, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.',
     color: 'hsl(180, 100%, 50%)'
   }
 ];
