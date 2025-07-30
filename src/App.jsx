@@ -418,7 +418,7 @@ function App() {
                         whileTap={{ scale: 0.95 }}
                         onClick={(e) => {
                           e.stopPropagation();
-                          window.open(`https://gruvlabel.com/${dj.id}`, '_blank');
+                          window.location.href = `/${dj.id}`;
                         }}
                       >
                         VER PERFIL
