@@ -6,29 +6,30 @@ const FixedFloatingButton = ({ djName, whatsappMessage }) => {
   const whatsappUrl = `https://api.whatsapp.com/send?phone=5547988625307&text=${encodeURIComponent(whatsappMessage)}`;
   
   return (
-    <motion.div
+    <div
       style={{
         position: 'fixed',
         bottom: '2rem',
         right: '2rem',
-        zIndex: 9999
+        zIndex: 9999,
+        pointerEvents: 'auto'
       }}
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ 
-        type: "spring", 
-        stiffness: 300, 
-        damping: 20,
-        delay: 0.5
-      }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
     >
-      <a 
+      <motion.a 
         href={whatsappUrl} 
         target="_blank" 
         rel="noopener noreferrer" 
-        style={{ textDecoration: 'none' }}
+        style={{ textDecoration: 'none', display: 'block' }}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ 
+          type: "spring", 
+          stiffness: 300, 
+          damping: 20,
+          delay: 0.8
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
         <motion.button
           style={{
@@ -60,8 +61,8 @@ const FixedFloatingButton = ({ djName, whatsappMessage }) => {
         >
           <MessageCircle style={{ width: '24px', height: '24px' }} />
         </motion.button>
-      </a>
-    </motion.div>
+      </motion.a>
+    </div>
   );
 };
 

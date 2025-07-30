@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Youtube, Instagram, Music } from 'lucide-react';
+import { Youtube, Instagram, Music, Calendar, TrendingUp, Megaphone, Video } from 'lucide-react';
 import './App.css';
 
 // Import components
@@ -471,10 +471,10 @@ function App() {
                 
                 <div className="services-grid">
                   {[
-                    { icon: 'fas fa-calendar-alt', text: 'Fechamento de Shows' },
-                    { icon: 'fas fa-chart-line', text: 'Gestão de Carreira' },
-                    { icon: 'fas fa-bullhorn', text: 'Marketing Digital' },
-                    { icon: 'fas fa-video', text: 'Produção de Conteúdo' }
+                    { Icon: Calendar, text: 'Fechamento de Shows' },
+                    { Icon: TrendingUp, text: 'Gestão de Carreira' },
+                    { Icon: Megaphone, text: 'Marketing Digital' },
+                    { Icon: Video, text: 'Produção de Conteúdo' }
                   ].map((service, index) => (
                     <motion.div 
                       key={index}
@@ -488,8 +488,8 @@ function App() {
                         transition: { type: "spring", stiffness: 300, damping: 20 }
                       }}
                       viewport={{ once: true }}
-                    >
-                      <i className="fas fa-check-circle"></i>
+                     >
+                      <service.Icon size={32} style={{ color: '#00ffff', marginBottom: '0.5rem' }} />
                       <span>{service.text}</span>
                     </motion.div>
                   ))}
