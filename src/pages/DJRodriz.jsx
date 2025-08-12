@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Instagram, Youtube, Music } from 'lucide-react';
+import { Play, Instagram, Youtube, Music, FileText } from 'lucide-react';
 import djRodrizImage from '../assets/djrodriz.webp';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
@@ -298,6 +298,31 @@ const DJRodriz = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Instagram style={{ width: '20px', height: '20px', color: '#e4405f' }} />
+            </motion.div>
+          </a>
+
+          <a href="https://drive.google.com/drive/folders/1hUcuHI1atpZjkxFklPqpAWP13L72G_hz" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Rodriz">
+            <motion.div
+              style={{
+                height: '40px',
+                borderRadius: '9999px',
+                padding: '0 12px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'rgba(0, 255, 255, 0.1)',
+                border: '1px solid rgba(0, 255, 255, 0.3)',
+                cursor: 'pointer'
+              }}
+              whileHover={{
+                scale: 1.05,
+                background: 'rgba(0, 255, 255, 0.15)',
+                borderColor: 'rgba(0, 255, 255, 0.5)'
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FileText style={{ width: '18px', height: '18px', color: '#00ffff' }} />
+              <span style={{ color: '#00ffff', fontWeight: 600, fontSize: '0.9rem' }}>Press Kit</span>
             </motion.div>
           </a>
         </motion.div>

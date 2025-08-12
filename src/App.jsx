@@ -357,19 +357,21 @@ function App() {
                   }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <motion.div 
-                    className="artist-image"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <OptimizedImage 
-                      src={dj.image} 
-                      alt={dj.name} 
-                      className="artist-photo"
-                      width="300"
-                      height="300"
-                    />
-                  </motion.div>
+                  <Link to={`/${dj.id}`} aria-label={`Ver perfil de ${dj.artistName || dj.name}`}>
+                    <motion.div 
+                      className="artist-image"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <OptimizedImage 
+                        src={dj.image} 
+                        alt={dj.name} 
+                        className="artist-photo"
+                        width="300"
+                        height="300"
+                      />
+                    </motion.div>
+                  </Link>
                   
                   <div className="artist-info">
                     <h3 className="artist-name">{dj.name}</h3>

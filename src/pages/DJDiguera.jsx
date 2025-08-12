@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Instagram, Youtube, Music } from 'lucide-react';
+import { Play, Instagram, Youtube, Music, FileText } from 'lucide-react';
 import digueraImage from '../assets/djdigoidg.webp';
 import SEOHead from '../components/SEOHead';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
@@ -300,6 +300,31 @@ const Diguera = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Instagram style={{ width: '24px', height: '24px', color: '#e4405f' }} />
+              </motion.div>
+            </a>
+
+            <a href="https://drive.google.com/drive/folders/1_sembv1xw4OESbCbJJVbKtU_dI8gbek-" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Diguera">
+              <motion.div
+                style={{
+                  height: '50px',
+                  borderRadius: '9999px',
+                  padding: '0 14px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  background: 'rgba(0, 255, 255, 0.1)',
+                  border: '1px solid rgba(0, 255, 255, 0.3)',
+                  cursor: 'pointer'
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  background: 'rgba(0, 255, 255, 0.15)',
+                  borderColor: 'rgba(0, 255, 255, 0.5)'
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FileText style={{ width: '20px', height: '20px', color: '#00ffff' }} />
+                <span style={{ color: '#00ffff', fontWeight: 600, fontSize: '1rem' }}>Press Kit</span>
               </motion.div>
             </a>
           </motion.div>
