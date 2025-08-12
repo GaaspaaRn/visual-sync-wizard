@@ -303,7 +303,7 @@ const Diguera = () => {
               </motion.div>
             </a>
 
-            <a href="https://drive.google.com/drive/folders/1_sembv1xw4OESbCbJJVbKtU_dI8gbek-" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Diguera">
+            <a href="https://drive.google.com/drive/folders/1_sembv1xw4OESbCbJJVbKtU_dI8gbek-" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Diguera" style={{ textDecoration: 'none', color: 'inherit' }}>
               <motion.div
                 style={{
                   height: '50px',

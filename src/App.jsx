@@ -10,7 +10,7 @@ import OptimizedImage from './components/OptimizedImage';
 import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
 import StructuredData from './components/StructuredData';
-import SEOCanonical from './components/SEOCanonical';
+import SEOHead from './components/SEOHead';
 
 // Import data and utils
 import { djs, getTotalStats } from './data/djs';
@@ -71,7 +71,13 @@ function App() {
 
   return (
     <div className="app">
-      <SEOCanonical />
+      <SEOHead
+        title="Gruv Label | Agenciamento de Artistas e DJs"
+        description="Agência especializada em bookings e gestão de carreira de DJs e produtores. Contrate artistas e eleve seu evento com a Gruv Label."
+        image="/og-image.jpg"
+        url="/"
+        type="website"
+      />
       <StructuredData type="website" />
       <CustomCursor />
       

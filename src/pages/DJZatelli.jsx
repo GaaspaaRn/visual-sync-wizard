@@ -300,7 +300,7 @@ const DJZatelli = () => {
               </motion.div>
             </a>
 
-            <a href="https://drive.google.com/drive/folders/1Fb4X4gurVyg6SAw4vaLUMhWg1hFI2Ywk" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Zatelli">
+            <a href="https://drive.google.com/drive/folders/1Fb4X4gurVyg6SAw4vaLUMhWg1hFI2Ywk" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Zatelli" style={{ textDecoration: 'none', color: 'inherit' }}>
               <motion.div
                 style={{
                   height: '40px',

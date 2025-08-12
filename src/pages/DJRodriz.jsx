@@ -301,7 +301,7 @@ const DJRodriz = () => {
             </motion.div>
           </a>
 
-          <a href="https://drive.google.com/drive/folders/1hUcuHI1atpZjkxFklPqpAWP13L72G_hz" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Rodriz">
+          <a href="https://drive.google.com/drive/folders/1hUcuHI1atpZjkxFklPqpAWP13L72G_hz" target="_blank" rel="noopener noreferrer" aria-label="Press Kit DJ Rodriz" style={{ textDecoration: 'none', color: 'inherit' }}>
             <motion.div
               style={{
                 height: '40px',
