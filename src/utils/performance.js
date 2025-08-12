@@ -41,25 +41,30 @@ export const preloadCriticalResources = () => {
 // Remove unused CSS classes
 export const removeUnusedCSS = () => {
   const styleSheets = Array.from(document.styleSheets);
-  
-  styleSheets.forEach(sheet => {
+
+  styleSheets.forEach((sheet) => {
     try {
-      const rules = Array.from(sheet.cssRules || sheet.rules);
-      rules.forEach(rule => {
-        if (rule.type === 1) { // CSS Rule
+      const href = sheet.href;
+      if (href && new URL(href).origin !== window.location.origin) {
+        return; // Skip cross-origin stylesheets
+      }
+      const rulesList = sheet.cssRules || sheet.rules;
+      if (!rulesList) return;
+
+      const rules = Array.from(rulesList);
+      // Iterate backwards to safely delete rules
+      for (let i = rules.length - 1; i >= 0; i--) {
+        const rule = rules[i];
+        if (rule.type === (window.CSSRule ? CSSRule.STYLE_RULE : 1)) {
           const selector = rule.selectorText;
           if (selector && !document.querySelector(selector)) {
-            // Remove unused rule
-            const index = Array.from(sheet.cssRules).indexOf(rule);
-            if (index > -1) {
-              sheet.deleteRule(index);
-            }
+            sheet.deleteRule(i);
           }
         }
-      });
+      }
     } catch (e) {
-      // Cross-origin stylesheets can't be accessed
-      console.log('Cannot access stylesheet:', e);
+      // Silently ignore stylesheets we can't access
+      // console.debug('removeUnusedCSS skipped a stylesheet', e);
     }
   });
 };

@@ -51,7 +51,7 @@ const OptimizedImage = ({
           animate={{ opacity: isLoaded ? 1 : 0 }}
           transition={{ duration: 0.3 }}
           loading={priority ? "eager" : "lazy"}
-          fetchPriority={priority ? "high" : "low"}
+          fetchpriority={priority ? "high" : "low"}
           decoding="async"
           {...props}
         />
