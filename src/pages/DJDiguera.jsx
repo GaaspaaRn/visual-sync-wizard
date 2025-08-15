@@ -205,7 +205,7 @@ const Diguera = () => {
               }}
               variants={itemVariants}
             >
-              DJ Diguera
+              Diguera
             </motion.h1>
             
             <motion.p 
@@ -216,7 +216,7 @@ const Diguera = () => {
               }}
               variants={itemVariants}
             >
-              @djdiguera
+              @diguerabr
             </motion.p>
           </motion.div>
 
