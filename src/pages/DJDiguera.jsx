@@ -279,7 +279,7 @@ const Diguera = () => {
               </motion.div>
             </a>
             
-            <a href="https://www.instagram.com/digoidg/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/diguerabr/" target="_blank" rel="noopener noreferrer">
               <motion.div
                 style={{
                   width: '50px',
