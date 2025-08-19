@@ -38,7 +38,7 @@ export const djs = [
       youtubeSubscribers: '8.8K',
       youtubeViews: '3M+',
       youtubeVideos: '62',
-      spotifyMonthly: '28K'
+      spotifyMonthly: '64K'
     },
     bio: 'Lucas Henrique iniciou sua carreira no Mega em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.',
     color: 'hsl(180, 100%, 50%)'
