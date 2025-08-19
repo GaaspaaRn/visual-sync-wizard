@@ -342,7 +342,7 @@ const DJLucasHenrique = () => {
           {[
             { label: "Inscritos", value: "8.8K", icon: Youtube, color: "#ff0000" },
             { label: "Visualizações", value: "3M", icon: Play, color: "#00ffff" },
-            { label: "Ouvintes/mês", value: "28K", icon: Music, color: "#1db954" }
+            { label: "Ouvintes/mês", value: "64K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
               key={index}
