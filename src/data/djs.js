@@ -19,7 +19,7 @@ export const djs = [
       youtubeSubscribers: '1.79K',
       youtubeViews: '2M+',
       youtubeVideos: '66',
-      spotifyMonthly: '102K'
+      spotifyMonthly: '120K'
     },
     bio: 'Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário, com colaborações ao lado de nomes de peso da cena.',
     color: 'hsl(180, 100%, 50%)'
