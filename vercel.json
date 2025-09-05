@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/dj-rodriz", "destination": "/rodriz", "permanent": true },
+    { "source": "/dj-lucashenrique", "destination": "/lucashenrique", "permanent": true },
+    { "source": "/dj-zatelli", "destination": "/zatelli", "permanent": true },
+    { "source": "/dj-diguera", "destination": "/diguera", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

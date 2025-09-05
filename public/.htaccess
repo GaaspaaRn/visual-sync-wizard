@@ -3,6 +3,12 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Redirect old DJ URLs to new format
+RewriteRule ^dj-rodriz/?$ /rodriz [R=301,L]
+RewriteRule ^dj-lucashenrique/?$ /lucashenrique [R=301,L]
+RewriteRule ^dj-zatelli/?$ /zatelli [R=301,L]
+RewriteRule ^dj-diguera/?$ /diguera [R=301,L]
+
 # Force www or non-www (escolha uma opção)
 # Opção 1: Force non-www (recomendado)
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
