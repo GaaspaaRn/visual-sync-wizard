@@ -284,7 +284,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Profissionalismo, Criatividade e Resultados nunca vistos antes
+              Contrate os melhores artistas para o seu evento
             </motion.p>
             
             <motion.div 
