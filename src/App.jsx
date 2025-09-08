@@ -398,7 +398,7 @@ function App() {
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Youtube size={18} />
+                        <Youtube size={20} />
                       </motion.a>
                       <motion.a 
                         href={dj.instagram} 
@@ -409,7 +409,7 @@ function App() {
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Instagram size={18} />
+                        <Instagram size={20} />
                       </motion.a>
                       <motion.a 
                         href={dj.spotifyUrl} 
@@ -420,7 +420,7 @@ function App() {
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Music size={18} />
+                        <Music size={20} />
                       </motion.a>
                     </div>
                     
