@@ -610,6 +610,7 @@ a {
   width: 100%
 }
 
+
 .btn-profile {
   background: var(--gradient-primary);
   color: hsl(var(--primary-foreground));
