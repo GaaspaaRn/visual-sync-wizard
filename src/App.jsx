@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Youtube, Instagram, Music, Calendar, TrendingUp, Megaphone, Video } from 'lucide-react';
-import './App.css';
 
 // Import components
 import CustomCursor from './components/CustomCursor';
@@ -11,6 +10,9 @@ import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
 import StructuredData from './components/StructuredData';
 import SEOHead from './components/SEOHead';
+
+// Import assets
+import heroPoster from './assets/hero-poster.webp';
 
 // Import data and utils
 import { djs, getTotalStats } from './data/djs';
@@ -71,9 +73,9 @@ function App() {
 
   return (
     <div className="app">
-      <SEOHead
-        title="Gruv Label | Agenciamento de Artistas e DJs"
-        description="Agência especializada em bookings e gestão de carreira de DJs e produtores. Contrate artistas e eleve seu evento com a Gruv Label."
+        <SEOHead
+        title="Contratar DJ Mega | Gruv Label - SC, PR, RS"
+        description="Contratar DJ Mega profissional em SC, PR e RS. Gruv Label - Booking de DJs para festas e eventos. Zatelli, Lucas Henrique e Rodriz disponíveis."
         image="/og-image.jpg"
         url="/"
         type="website"
@@ -235,9 +237,8 @@ function App() {
             loop 
             playsInline
             className="hero-video-element"
-            poster=""
-            preload="metadata"
-            loading="lazy"
+            poster={heroPoster}
+            preload="none"
           >
             <source src="./videos/gruvlabel-djzatelli.mp4" type="video/mp4" />
             Seu navegador não suporta o elemento de vídeo.

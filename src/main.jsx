@@ -9,6 +9,11 @@ import { initPerformanceOptimizations } from './utils/performance'
 // Initialize performance optimizations
 initPerformanceOptimizations();
 
+// Initialize critical resource hints
+import('./utils/criticalResourceHints').then(({ addCriticalResourceHints }) => {
+  addCriticalResourceHints();
+});
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SmoothScroll>

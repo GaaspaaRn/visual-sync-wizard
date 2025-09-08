@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import heroPoster from '../assets/hero-poster.webp';
 
 const SEOHead = ({ 
   title, 
@@ -38,6 +39,10 @@ const SEOHead = ({
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
+      
+      {/* Preload critical resources */}
+      <link rel="preload" href="/fonts/Dystopian-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+      <link rel="preload" href={heroPoster} as="image" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://open.spotify.com" />
