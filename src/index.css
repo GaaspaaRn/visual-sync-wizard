@@ -985,3 +985,77 @@ a {
   }
 }
 
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Loading and Performance Optimizations */
+.loading-placeholder, 
+.embed-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  min-height: 150px;
+}
+
+.component-skeleton {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Critical CSS optimizations */
+.hero-video-element {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.artist-card {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+.section-title {
+  contain: layout;
+}
+
+/* Reduce motion for performance on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  .hero-video-element {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .artist-card {
+    will-change: auto;
+  }
+}
+

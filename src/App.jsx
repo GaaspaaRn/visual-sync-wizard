@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion/dist/framer-motion';
 import { Youtube, Instagram, Music, Calendar, TrendingUp, Megaphone, Video } from 'lucide-react';
 
-// Import components
-import CustomCursor from './components/CustomCursor';
+// Import components - lazy load heavy components
+const CustomCursor = lazy(() => import('./components/CustomCursor'));
+const RevealOnScroll = lazy(() => import('./components/RevealOnScroll'));
+
+// Critical components (don't lazy load)
 import OptimizedImage from './components/OptimizedImage';
-import RevealOnScroll from './components/RevealOnScroll';
 import LoadingScreen from './components/LoadingScreen';
 import StructuredData from './components/StructuredData';
 import SEOHead from './components/SEOHead';
@@ -73,7 +75,7 @@ function App() {
 
   return (
     <div className="app">
-        <SEOHead
+      <SEOHead
         title="Contratar DJ Mega | Gruv Label - SC, PR, RS"
         description="Contratar DJ Mega profissional em SC, PR e RS. Gruv Label - Booking de DJs para festas e eventos. Zatelli, Lucas Henrique e Rodriz disponíveis."
         image="/og-image.jpg"
@@ -81,7 +83,9 @@ function App() {
         type="website"
       />
       <StructuredData type="website" />
-      <CustomCursor />
+      <Suspense fallback={null}>
+        <CustomCursor />
+      </Suspense>
       
       {/* Header */}
       <motion.header 
@@ -348,13 +352,16 @@ function App() {
       {/* Artists Section */}
       <section id="artists" className="artists">
         <div className="container">
-          <RevealOnScroll>
+          <Suspense fallback={<div className="animate-pulse bg-secondary/20 rounded-lg h-16 w-64 mx-auto mb-8"></div>}>
+            <RevealOnScroll>
             <h2 className="section-title">NOSSOS ARTISTAS</h2>
           </RevealOnScroll>
+          </Suspense>
           
           <div className="artists-grid">
             {djs.map((dj, index) => (
-              <RevealOnScroll key={dj.id} delay={index * 0.1}>
+              <Suspense fallback={<div className="animate-pulse bg-secondary/20 rounded-lg h-96 w-full"></div>} key={dj.id}>
+                <RevealOnScroll delay={index * 0.1}>
                 <motion.div 
                   className="artist-card"
                   style={{ '--accent-color': dj.color }}
@@ -451,6 +458,7 @@ function App() {
                   </div>
                 </motion.div>
               </RevealOnScroll>
+              </Suspense>
             ))}
           </div>
         </div>
@@ -459,8 +467,9 @@ function App() {
       {/* About Section */}
       <section id="about" className="about">
         <div className="container">
-          <RevealOnScroll>
-            <div className="about-content">
+          <Suspense fallback={<div className="animate-pulse bg-secondary/20 rounded-lg h-64 w-full"></div>}>
+            <RevealOnScroll>
+              <div className="about-content">
               <div className="about-text">
                 <h2 className="section-title">SOBRE A GRUV LABEL</h2>
                 <motion.p
