@@ -64,7 +64,7 @@ const DJRodriz = () => {
     <PerformanceOptimizer>
       <SEOHead 
         title="DJ Rodriz | Gruv Label - Electronic Music Producer"
-        description="DJ Rodriz - Producer de música eletrônica com 1.79K inscritos no YouTube e 120K ouvintes mensais no Spotify. Contrate DJ Rodriz para seu evento."
+        description="DJ Rodriz - Producer de música eletrônica com 1.79K inscritos no YouTube e 180K ouvintes mensais no Spotify. Contrate DJ Rodriz para seu evento."
         image="/assets/djrodriz.webp"
         url="/rodriz"
         artist={{
@@ -342,7 +342,7 @@ const DJRodriz = () => {
           {[
             { label: "Inscritos", value: "1.79K", icon: Youtube, color: "#ff0000" },
             { label: "Visualizações", value: "1,89M", icon: Play, color: "#00ffff" },
-            { label: "Ouvintes/mês", value: "120K", icon: Music, color: "#1db954" }
+            { label: "Ouvintes/mês", value: "180K", icon: Music, color: "#1db954" }
           ].map((stat, index) => (
             <motion.div
               key={index}
