@@ -470,54 +470,55 @@ function App() {
           <Suspense fallback={<div className="animate-pulse bg-secondary/20 rounded-lg h-64 w-full"></div>}>
             <RevealOnScroll>
               <div className="about-content">
-              <div className="about-text">
-                <h2 className="section-title">SOBRE A GRUV LABEL</h2>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  A <strong>Gruv Label</strong> é uma agência especializada em bookings e agenciamento de artistas.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  Adotamos um modelo 360°, oferecendo um suporte completo que vai desde o fechamento de datas 
-                  de shows até a gestão de carreira, cuidado com a imagem do artista, assessoria de conteúdo e marketing.
-                </motion.p>
-                
-                <div className="services-grid">
-                  {[
-                    { Icon: Calendar, text: 'Fechamento de Shows' },
-                    { Icon: TrendingUp, text: 'Gestão de Carreira' },
-                    { Icon: Megaphone, text: 'Marketing Digital' },
-                    { Icon: Video, text: 'Produção de Conteúdo' }
-                  ].map((service, index) => (
-                    <motion.div 
-                      key={index}
-                      className="service"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                      whileHover={{ 
-                        scale: 1.05, 
-                        y: -5,
-                        transition: { type: "spring", stiffness: 300, damping: 20 }
-                      }}
-                      viewport={{ once: true }}
-                     >
-                      <service.Icon size={32} style={{ color: '#00ffff', marginBottom: '0.5rem' }} />
-                      <span>{service.text}</span>
-                    </motion.div>
-                  ))}
+                <div className="about-text">
+                  <h2 className="section-title">SOBRE A GRUV LABEL</h2>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    A <strong>Gruv Label</strong> é uma agência especializada em bookings e agenciamento de artistas.
+                  </motion.p>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    Adotamos um modelo 360°, oferecendo um suporte completo que vai desde o fechamento de datas 
+                    de shows até a gestão de carreira, cuidado com a imagem do artista, assessoria de conteúdo e marketing.
+                  </motion.p>
+                  
+                  <div className="services-grid">
+                    {[
+                      { Icon: Calendar, text: 'Fechamento de Shows' },
+                      { Icon: TrendingUp, text: 'Gestão de Carreira' },
+                      { Icon: Megaphone, text: 'Marketing Digital' },
+                      { Icon: Video, text: 'Produção de Conteúdo' }
+                    ].map((service, index) => (
+                      <motion.div 
+                        key={index}
+                        className="service"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                        whileHover={{ 
+                          scale: 1.05, 
+                          y: -5,
+                          transition: { type: "spring", stiffness: 300, damping: 20 }
+                        }}
+                        viewport={{ once: true }}
+                       >
+                        <service.Icon size={32} style={{ color: '#00ffff', marginBottom: '0.5rem' }} />
+                        <span>{service.text}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </RevealOnScroll>
+            </RevealOnScroll>
+          </Suspense>
         </div>
       </section>
 
