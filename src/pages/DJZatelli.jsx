@@ -13,7 +13,7 @@ const DJZatelli = () => {
 
   const artistData = {
     name: "DJ Zatelli",
-    description: "DJ e produtor musical da Gruv Label. Especialista em house music e eletrônicos. Mais de 6K inscritos no YouTube e 1.8M visualizações.",
+    description: "DJ e produtor musical da Gruv Label. Especialista em Mega Funk. Mais de 6K inscritos no YouTube e 1.8M visualizações.",
     socialLinks: {
       spotify: "https://open.spotify.com/intl-pt/artist/5WXA9QsuHzbaB696vr1Hkg",
       youtube: "https://www.youtube.com/@DjZatelli",
@@ -66,8 +66,8 @@ const DJZatelli = () => {
     <PerformanceOptimizer>
       <DJPageCSS />
       <SEOHead
-        title="DJ Zatelli - Gruv Label | House Music & Electronic"
-        description="DJ Zatelli da Gruv Label. Especialista em house music e eletrônicos. Mais de 6K inscritos no YouTube e 1.8M visualizações. Contrate agora!"
+        title="DJ Zatelli - Gruv Label | Electronic Producer"
+        description="DJ Zatelli da Gruv Label. Especialista em Mega Funk. Mais de 6K inscritos no YouTube e 1.8M visualizações. Contrate agora!"
         image="/assets/djzatelli_1.webp"
         url="/zatelli"
         type="profile"
