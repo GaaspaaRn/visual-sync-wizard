@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion/dist/framer-motion';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { Youtube, Instagram, Music, Calendar, TrendingUp, Megaphone, Video } from 'lucide-react';
 
 // Import components - lazy load heavy components
