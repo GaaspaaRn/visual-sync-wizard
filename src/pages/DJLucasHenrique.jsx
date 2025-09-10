@@ -69,7 +69,7 @@ const DJLucasHenrique = () => {
         url="/lucashenrique"
         artist={{
           name: "DJ Lucas Henrique",
-          description: "Producer de música eletrônica especializado em electronic music"
+          description: "Producer de música eletrônica especializado em Mega Funk"
         }}
         socialLinks={{
           spotify: "https://open.spotify.com/intl-pt/artist/0auLP5j5MbnqMRXmdlvub9",

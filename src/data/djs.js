@@ -21,7 +21,7 @@ export const djs = [
       youtubeVideos: '66',
       spotifyMonthly: '180K'
     },
-    bio: 'Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário, com colaborações ao lado de nomes de peso da cena.',
+    bio: 'Producer de música eletrônica especializado em Mega Funk. Iniciou sua trajetória musical em 2023, aos 16 anos, produzindo seus próprios sons e sempre buscando inovação em suas criações. Atualmente, com 18 anos, vem conquistando seu espaço no cenário eletrônico.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -40,7 +40,7 @@ export const djs = [
       youtubeVideos: '62',
       spotifyMonthly: '64K'
     },
-    bio: 'Lucas Henrique iniciou sua carreira no Mega em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade. Desde então vem se destacando e trazendo sua melhor performance para seus shows.',
+    bio: 'Producer de música eletrônica especializado em Mega Funk. Lucas Henrique iniciou sua carreira no Mega em 2022, produzindo suas músicas e sendo influenciado por vários artistas já renomados da cena eletrônica. Ganhou destaque já no começo de sua carreira, onde começou a tocar em casas de shows e foi reconhecido pela comunidade.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -59,7 +59,7 @@ export const djs = [
       youtubeVideos: '57',
       spotifyMonthly: '5K'
     },
-    bio: 'Thiago Correira, mais conhecido como DJ Zatelli, Nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e produtor de Mega desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena do mega por estar sempre inovando a cada novo som. Se apresentando em várias cidades do Sul do País, Zatelli vem conquistando cada vez mais reconhecimento e fama.',
+    bio: 'Producer de música eletrônica especializado em Mega Funk. Thiago Correira, mais conhecido como DJ Zatelli, nasceu e cresceu em SC, na cidade de Joinville. Ele é um DJ e producer de música eletrônica desde os 16 anos de idade, atualmente acumula mais de 1,8 milhões de visualizações. Se destaca na cena eletrônica por estar sempre inovando a cada novo som.',
     color: 'hsl(180, 100%, 50%)'
   },
   {
@@ -78,7 +78,7 @@ export const djs = [
       youtubeVideos: '47',
       spotifyMonthly: '0.2K'
     },
-    bio: 'Rodrigo (23 anos), natural de Joinville, Santa Catarina. DJ Diguera começou sua carreira no Mega no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade. DJ Diguera é um artista versátil que segue crescendo na cena do Mega, sempre buscando entregar o melhor em cada apresentação e evoluindo como artista.',
+    bio: 'Producer de música eletrônica especializado em Mega Funk. Rodrigo (23 anos), natural de Joinville, Santa Catarina. DJ Diguera começou sua carreira na música eletrônica no final de 2019. Com o tempo, foi criando seu estilo e conquistando seu espaço, entre 2020 e 2021 ganhou reconhecimento do público e da comunidade eletrônica.',
     color: 'hsl(180, 100%, 50%)'
   }
 ];

@@ -69,7 +69,7 @@ const DJRodriz = () => {
         url="/rodriz"
         artist={{
           name: "DJ Rodriz",
-          description: "Producer de música eletrônica especializado em electronic music"
+          description: "Producer de música eletrônica especializado em Mega Funk"
         }}
         socialLinks={{
           spotify: "https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP",

@@ -76,8 +76,8 @@ function App() {
   return (
     <div className="app">
       <SEOHead
-        title="Contratar DJ Mega | Gruv Label - SC, PR, RS"
-        description="Contratar DJ Mega profissional em SC, PR e RS. Gruv Label - Booking de DJs para festas e eventos. Zatelli, Lucas Henrique e Rodriz disponíveis."
+        title="Contratar DJs Electronic Music | Gruv Label - Mega Funk"
+        description="Contratar DJs Electronic Music profissionais especializados em Mega Funk. Gruv Label - Booking de Producers: Zatelli, Lucas Henrique, Rodriz e Diguera para festas e eventos."
         image="/og-image.jpg"
         url="/"
         type="website"

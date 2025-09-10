@@ -8,14 +8,15 @@ const StructuredData = ({ type = 'website', data = {} }) => {
       "@type": type === 'artist' ? 'Person' : 'Organization',
       "name": data.name || "Gruv Label",
       "url": data.url || "https://gruvlabel.com",
-      "description": data.description || "Empresa especializada em DJs para eventos em São Paulo"
+      "description": data.description || "Empresa especializada em Producers de Música Eletrônica e DJs para eventos em São Paulo"
     };
 
     if (type === 'artist') {
       return {
         ...baseData,
         "@type": "Person",
-        "jobTitle": "DJ/Producer",
+        "jobTitle": "Electronic Music Producer & DJ",
+        "genre": ["Electronic Music", "Mega Funk", "Brazilian Electronic"],
         "memberOf": {
           "@type": "Organization",
           "name": "Gruv Label",
@@ -25,8 +26,10 @@ const StructuredData = ({ type = 'website', data = {} }) => {
         "image": data.image,
         "performer": {
           "@type": "PerformingGroup",
-          "name": data.name
-        }
+          "name": data.name,
+          "genre": ["Electronic Music", "Mega Funk"]
+        },
+        "knowsAbout": ["Music Production", "DJ Performance", "Electronic Music", "Event Entertainment"]
       };
     }
 
@@ -52,9 +55,10 @@ const StructuredData = ({ type = 'website', data = {} }) => {
         ],
         "offers": {
           "@type": "Offer",
-          "name": "Serviços de DJ para Eventos",
-          "description": "DJs profissionais para festas, casamentos, eventos corporativos",
-          "category": "Entertainment Services"
+          "name": "Serviços de DJ Electronic Music para Eventos",
+          "description": "Producers de música eletrônica e DJs profissionais especializados em Mega Funk para festas, casamentos, eventos corporativos",
+          "category": "Entertainment Services",
+          "genre": ["Electronic Music", "Mega Funk", "Brazilian Electronic"]
         }
       };
     }
