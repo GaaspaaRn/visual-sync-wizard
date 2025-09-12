@@ -5,7 +5,7 @@ import App from './App';
 import DJRodriz from './pages/DJRodriz';
 import DJLucasHenrique from './pages/DJLucasHenrique';
 import DJZatelli from './pages/DJZatelli';
-import DJDiguera from './pages/DJDiguera';
+import DJDigueraPro from './pages/DJDigueraPro';
 
 function AppRouter() {
   return (
@@ -16,7 +16,7 @@ function AppRouter() {
           <Route path="/rodriz" element={<DJRodriz />} />
           <Route path="/lucashenrique" element={<DJLucasHenrique />} />
           <Route path="/zatelli" element={<DJZatelli />} />
-          <Route path="/diguera" element={<DJDiguera />} />
+          <Route path="/diguera" element={<DJDigueraPro />} />
         </Routes>
       </Router>
     </HelmetProvider>
