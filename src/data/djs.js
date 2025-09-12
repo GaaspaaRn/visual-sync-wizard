@@ -70,7 +70,7 @@ export const djs = [
     youtube: 'https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ',
     instagram: 'https://www.instagram.com/digoidg/',
     spotifyEmbed: 'https://open.spotify.com/embed/track/2UR8zmsZgwCJ0dwnlpY9KN?utm_source=generator&theme=0',
-    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/7ff4I1cuWy9xBpTaYeinvv',
+    spotifyUrl: 'https://open.spotify.com/intl-pt/artist/1CKoqzkaphGMIcHZ55JvvM',
     topTrack: 'Mega Senta Fumadona',
     stats: {
       youtubeSubscribers: '2.46K',
