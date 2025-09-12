@@ -73,9 +73,9 @@ const Diguera = () => {
           description: "Producer de música eletrônica especializado em Mega Funk"
         }}
         socialLinks={{
-          spotify: "https://open.spotify.com/intl-pt/artist/7ff4I1cuWy9xBpTaYeinvv",
+          spotify: "https://open.spotify.com/intl-pt/artist/1CKoqzkaphGMIcHZ55JvvM",
           youtube: "https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ",
-          instagram: "https://www.instagram.com/digoidg/"
+          instagram: "https://www.instagram.com/diguerabr/"
         }}
       />
       <DJPageCSS />
