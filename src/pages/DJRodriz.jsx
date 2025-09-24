@@ -74,7 +74,7 @@ const DJRodriz = () => {
         socialLinks={{
           spotify: "https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP",
           youtube: "https://www.youtube.com/@djrodriz1",
-          instagram: "https://www.instagram.com/rodriz.wav/"
+          instagram: "https://www.instagram.com/rodrizdj/"
         }}
       />
       <DJPageCSS />
@@ -214,7 +214,7 @@ const DJRodriz = () => {
             }}
             variants={itemVariants}
           >
-            @rodriz.wav
+            @rodrizdj
           </motion.p>
         </motion.div>
 
@@ -277,7 +277,7 @@ const DJRodriz = () => {
             </motion.div>
           </a>
           
-          <a href="https://www.instagram.com/rodriz.wav/?hl=pt-br" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/rodrizdj/?hl=pt-br" target="_blank" rel="noopener noreferrer">
             <motion.div
               style={{
                 width: '40px',
