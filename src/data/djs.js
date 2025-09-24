@@ -11,7 +11,7 @@ export const djs = [
     artistName: 'Rodriz',
     image: djRodrizImg,
     youtube: 'https://www.youtube.com/@djrodriz1',
-    instagram: 'https://www.instagram.com/rodriz.wav/?hl=pt-br',
+    instagram: 'https://www.instagram.com/rodrizdj/?hl=pt-br',
     spotifyEmbed: 'https://open.spotify.com/embed/track/1T0Za0ldouSRjRMH94SwWI?utm_source=generator&theme=0',
     spotifyUrl: 'https://open.spotify.com/intl-pt/artist/3s085Y3JMDExHJiZzDxhUP',
     topTrack: 'MEGA SUSTENTA',
