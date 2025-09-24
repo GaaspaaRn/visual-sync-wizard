@@ -775,7 +775,8 @@ a {
   border: none;
   cursor: pointer;
   z-index: 1001;
-  padding: 5px;
+  padding: 8px;
+  position: relative;
 }
 
 .hamburger {
@@ -856,11 +857,11 @@ a {
 
 @media (max-width: 768px) {
   .desktop-nav {
-    display: none;
+    display: none !important;
   }
   
   .mobile-menu-toggle {
-    display: block;
+    display: block !important;
   }
   
   .hero-stats {
