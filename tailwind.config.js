@@ -8,41 +8,41 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Cores primárias
-        background: "hsl(0, 0%, 4%)",
-        foreground: "hsl(0, 0%, 100%)",
+        // Usando variáveis CSS para consistência
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         
-        // Cores secundárias/acentos
+        // Cores primárias
         primary: {
-          DEFAULT: "hsl(180, 100%, 50%)",
-          foreground: "hsl(0, 0%, 4%)",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(0, 0%, 8%)",
-          foreground: "hsl(0, 0%, 100%)",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(180, 100%, 50%)",
-          foreground: "hsl(0, 0%, 4%)",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         
         // Cores de utilidade
         muted: {
-          DEFAULT: "hsl(0, 0%, 8%)",
-          foreground: "hsl(0, 0%, 65%)",
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         card: {
-          DEFAULT: "hsl(0, 0%, 8%)",
-          foreground: "hsl(0, 0%, 100%)",
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
-        border: "hsl(0, 0%, 15%)",
-        input: "hsl(0, 0%, 15%)",
-        ring: "hsl(180, 100%, 50%)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         
         // Cores de estado
         destructive: {
-          DEFAULT: "hsl(0, 62%, 30%)",
-          foreground: "hsl(0, 0%, 100%)",
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
       },
       fontFamily: {
@@ -56,8 +56,8 @@ export default {
         xs: '2px',
       },
       boxShadow: {
-        'neon': '0 0 40px hsl(180, 100%, 50%)',
-        'neon-sm': '0 0 20px hsl(180, 100%, 50%)',
+        'neon': '0 0 40px hsl(var(--primary))',
+        'neon-sm': '0 0 20px hsl(var(--primary))',
       },
     },
   },
