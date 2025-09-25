@@ -29,7 +29,7 @@ const DJDiguera = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Diguera - DJ / Produtor | Mega Funk" />
         <meta property="og:description" content="Energia e batidas únicas do Mega Funk. Conheça o trabalho de Diguera e contrate para seu evento." />
-        <meta property="og:image" content="/src/assets/diguera-logo.png" />
+        <meta property="og:image" content="/diguera-logo.png" />
         <meta property="og:url" content="https://gruvlabel.com/diguera" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Diguera" />
@@ -38,7 +38,7 @@ const DJDiguera = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Diguera - DJ / Produtor | Mega Funk" />
         <meta property="twitter:description" content="Energia e batidas únicas do Mega Funk. Conheça o trabalho de Diguera e contrate para seu evento." />
-        <meta property="twitter:image" content="/src/assets/diguera-logo.png" />
+        <meta property="twitter:image" content="/diguera-logo.png" />
         
         {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,7 +55,7 @@ const DJDiguera = () => {
             "description": "Diguera é um DJ e produtor musical de Joinville, SC, especializado em Mega Funk. Conhecido por seu estilo único e shows energéticos, Diguera é um nome em ascensão na cena da música eletrônica no Sul do Brasil.",
             "genre": "Mega Funk",
             "url": "https://gruvlabel.com/diguera",
-            "image": "/src/assets/diguera-logo.png",
+            "image": "/diguera-logo.png",
             "sameAs": [
               "https://open.spotify.com/intl-pt/artist/1CKoqzkaphGMIcHZ55JvvM",
               "https://www.youtube.com/channel/UC-CEC6IFh1ogjyJlL3QOslQ",
@@ -92,7 +92,7 @@ const DJDiguera = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-black text-gray-200 overflow-x-hidden">
+      <div className="min-h-screen bg-black text-gray-200 overflow-x-hidden diguera-page">
         {/* Background Video */}
         <div className="fixed inset-0 z-0">
           <video
@@ -114,11 +114,11 @@ const DJDiguera = () => {
           <section className="min-h-screen flex flex-col items-center justify-center px-4 text-center">
             <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
               <img
-                src="/src/assets/diguera-logo.png"
+                src="/diguera-logo.png"
                 alt="Logo Diguera"
-                className="w-auto h-40 md:h-56 mx-auto mb-8 animate-fade-in-up"
+                className="w-auto h-40 md:h-56 mx-auto mb-8 diguera-fade-in-up"
               />
-              <h1 className="text-green-400 text-2xl md:text-3xl font-bold tracking-wider mb-16 animate-fade-in-up" style={{ fontFamily: 'Orbitron, sans-serif', animationDelay: '0.2s' }}>
+              <h1 className="text-green-400 text-2xl md:text-3xl font-bold tracking-wider mb-16 diguera-fade-in-up-delayed orbitron-font">
                 DJ / PRODUTOR
               </h1>
             </div>
@@ -127,7 +127,7 @@ const DJDiguera = () => {
           {/* Music Section */}
           <section id="musicas" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white orbitron-font">
                 Músicas
               </h2>
               
@@ -210,7 +210,7 @@ const DJDiguera = () => {
           {/* Videos Section */}
           <section id="videos" className="py-20 px-4 bg-gray-900 bg-opacity-30">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white orbitron-font">
                 Vídeos
               </h2>
               
@@ -249,14 +249,14 @@ const DJDiguera = () => {
           {/* About Section */}
           <section id="sobre" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white orbitron-font">
                 Sobre Diguera
               </h2>
               
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <img
-                    src="/src/assets/djdigoidg.webp"
+                    src="/djdigoidg.webp"
                     alt="Foto de Diguera, DJ e produtor de Mega Funk de Joinville"
                     className="w-full h-96 object-cover rounded-lg"
                   />
@@ -285,70 +285,12 @@ const DJDiguera = () => {
         {/* Floating Contact Button */}
         <button
           onClick={handleContactClick}
-          className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 z-50"
-          style={{ fontFamily: 'Roboto Mono, monospace' }}
+          className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-black font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 z-50 roboto-mono-font"
         >
           CONTRATE
         </button>
       </div>
 
-      <style jsx>{`
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        body {
-          font-family: 'Roboto Mono', monospace;
-          background-color: #000;
-          color: #e5e7eb;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-          font-family: 'Orbitron', sans-serif;
-        }
-        
-        /* Custom scrollbar for webkit browsers */
-        ::-webkit-scrollbar {
-          width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-          background: #111;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background: #4ade80;
-          border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background: #22c55e;
-        }
-        
-        /* Custom animations */
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fade-in-up {
-          animation: fadeInUp 1s ease-out forwards;
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `}</style>
     </>
   );
 };

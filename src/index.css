@@ -1069,3 +1069,71 @@ a {
   }
 }
 
+/* ============= DIGUERA CUSTOM STYLES ============= */
+
+/* Diguera Fonts */
+.orbitron-font {
+  font-family: 'Orbitron', sans-serif !important;
+}
+
+.roboto-mono-font {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+/* Diguera Page Specific Styles */
+.diguera-page {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #000;
+  color: #e5e7eb;
+}
+
+/* Diguera Animations */
+@keyframes diguera-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.diguera-fade-in-up {
+  animation: diguera-fade-in-up 1s ease-out forwards;
+}
+
+.diguera-fade-in-up-delayed {
+  animation: diguera-fade-in-up 1s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Custom scrollbar for Diguera page */
+.diguera-page ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.diguera-page ::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.diguera-page ::-webkit-scrollbar-thumb {
+  background: #4ade80;
+  border-radius: 4px;
+}
+
+.diguera-page ::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
+
+/* Accessibility - Reduce motion for Diguera */
+@media (prefers-reduced-motion: reduce) {
+  .diguera-fade-in-up,
+  .diguera-fade-in-up-delayed {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    opacity: 1 !important;
+  }
+}
+
